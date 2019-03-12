@@ -1,14 +1,4 @@
-.header {
-    width: 100%;
-    height: 50px;
-}
-
-.body {
-    background-color: black;
-    width: 100%;
-    height: 1200px;
-    margin: 0px auto;
-    /* padding: 0px;  */
-    /* outline: none;
-    border: 0px; */
+.home-button {
+    float: center;
+    align-content: center;
 }

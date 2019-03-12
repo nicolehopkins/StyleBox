@@ -1,18 +1,19 @@
 import React, { Component } from 'react';
 import './Home.css';
+import Background from './HomeBackground';
 
 
 class Home extends Component {
     render() {
         return (
-            <>
-            <div className='header'>
-            <h1>StyleBox</h1>
-          </div>
-          <div className='body'>
-              Body
-          </div>
-          </>
+                <div className='body'>
+                    <div >
+                        <button className='home-button' >Get Started</button>
+                    </div>
+                    <div>
+                        <Background />
+                    </div>
+                </div>
         )
     }
 
