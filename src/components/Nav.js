@@ -23,10 +23,9 @@ const Nav = () => {
                         <Link to='/products'>Search Products <FaSearch /></Link>
                     </div>
                     <div className='account-tags links'>
-                        <Link to='/login'>Sign In<FiUser /></Link>
+                        <Link to='/login'>Sign In<FiUser /></Link> {/* Will toggle with FiUserCheck after signing in */}
                         <Link to='/cart'>My Cart<FiShoppingCart /></Link>
                     </div>
-
                     <Route exact path="/" component={Home} />
                     {/* <Route path="/howitworks" component={HowItWorks} /> */}
                     <Route path="/products" component={Products} />
