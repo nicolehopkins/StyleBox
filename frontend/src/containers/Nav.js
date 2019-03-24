@@ -49,6 +49,9 @@ export default class Nav extends React.Component {
                                     <Link className="links" to="/products">Search <FaSearch /></Link>
                                 </li>
                                 <li className="nav-item">
+                                    <Link className="links" to="/signup">Sign Up <FiUser /></Link>
+                                </li>
+                                <li className="nav-item">
                                     <Link className="links" to="/login">Sign In <FiUser /></Link>
                                 </li>
                             </ul>

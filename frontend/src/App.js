@@ -6,6 +6,7 @@ import firebase from './firebase';
 // ---- Pages
 import Nav from './containers/Nav';
 import Home from './containers/Home';
+import Signup from './components/Signup';
 import Login from './components/Login';
 import Logout from './containers/Logout';
 import Products from './components/Products';
@@ -47,7 +48,7 @@ class App extends Component {
           <div className='container mt-5'>
             <Switch>
               <Route path='/' exact component={ Home } />
-              <Route path='/signin' exact component={ Login } />
+              <Route path='/signup' exact component={ Signup } />
               <Route path='/login' exact component={ Login } />
               <Route path='/logout' exact component={ Logout } />
               <Route path='/products' exact component={ Products } />
