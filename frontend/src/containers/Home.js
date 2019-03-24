@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import './Home.css';
-import Background from './HomeBackground';
+import '../styling/Home.css';
+import Background from '../components/HomeBackground';
 
 
 class Home extends Component {
