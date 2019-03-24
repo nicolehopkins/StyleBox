@@ -3,7 +3,7 @@ import { Card, CardImg, CardText, CardBody,
     CardTitle, CardSubtitle, Button} from 'reactstrap';
 import { FaRegThumbsUp } from 'react-icons/fa';
 import { FiHeart } from 'react-icons/fi';
-import './Products.css'
+import '../styling/Products.css'
 
 
 const Products = (props) => {
