@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import firebase from '../firebase';
 import AuthContext from '../contexts/auth';
 import { Button, Form, FormGroup, Label, Input} from 'reactstrap';
@@ -6,7 +6,7 @@ import { Redirect } from 'react-router-dom';
 import '../styling/Login.css';
 
 
-class Login extends React.Component {
+export default class Login extends Component {
 
   state = {
     email: '',
@@ -54,17 +54,17 @@ class Login extends React.Component {
     const displayLogIn = <>
                         <h1>Login</h1>
                         {displayError}
-                        <form>
+                        <Form>
                           <div className="form-group">
-                            <label htmlFor="exampleInputEmail1">Email</label>
-                            <input type="email" className="form-control" aria-describedby="emailHelp" placeholder="Enter email" name="email" value={email} onChange={this.handleChange} />
+                            <Label htmlFor="exampleInputEmail1">Email</Label>
+                            <Input type="email" className="form-control" aria-describedby="emailHelp" placeholder="Enter email" name="email" value={email} onChange={this.handleChange} />
                           </div>
                           <div className="form-group">
-                            <label htmlFor="exampleInputPassword1">Password</label>
-                            <input type="password" className="form-control" placeholder="Password" value={password} name="password" onChange={this.handleChange} />
+                            <Label htmlFor="exampleInputPassword1">Password</Label>
+                            <Input type="password" className="form-control" placeholder="Password" value={password} name="password" onChange={this.handleChange} />
                           </div>
-                          <button type="submit" className="btn btn-primary" onClick={this.handleSubmit}>Login</button>
-                        </form>
+                          <Button type="submit" className="btn btn-primary" onClick={this.handleSubmit}>Login</Button>
+                        </Form>
                       </>;
 
 
@@ -73,7 +73,7 @@ class Login extends React.Component {
         {
           (user) => {
             if (user) {
-              return <Redirect to ='/' />
+              return <Redirect to ='/products' />
             }
             else {
               return displayLogIn;
@@ -85,6 +85,3 @@ class Login extends React.Component {
     )
   }
 }
-
-
-export default Login;

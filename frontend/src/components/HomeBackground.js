@@ -27,13 +27,12 @@ const items = [
 ];
 
 class Background extends Component {
-  constructor(props) {
-    super(props);
-    this.state = { activeIndex: 0 };
-    this.goToIndex = this.goToIndex.bind(this);
-    this.onExiting = this.onExiting.bind(this);
-    this.onExited = this.onExited.bind(this);
-  }
+    state = { 
+      activeIndex: 0,
+      goToIndex: null,
+      onExiting: null,
+      onExited: null
+     };
 
   onExiting() {
     this.animating = true;

@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
-import '../styling/Home.css';
 import Background from '../components/HomeBackground';
+import '../styling/Home.css';
 
 
-class Home extends Component {
+export default class Home extends Component {
+
     render() {
         return (
                 <div className='body'>
@@ -16,8 +17,4 @@ class Home extends Component {
                 </div>
         )
     }
-
 }
-
-
-export default Home;

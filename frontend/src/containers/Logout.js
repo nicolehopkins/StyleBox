@@ -1,7 +1,7 @@
-import React from 'react';
+import React, { Component } from 'react';
 import firebase from '../firebase';
 
-export default class Logout extends React.Component {
+export default class Logout extends Component {
 
   componentDidMount() {
     firebase.auth().signOut()

@@ -3,7 +3,7 @@ import { Redirect } from 'react-router-dom';
 import firebase from '../firebase';
 import AuthContext from '../contexts/auth';
 
-export default class Signup extends React.Component {
+export default class Signup extends Component {
 
     state = {
       email: '',
@@ -54,7 +54,7 @@ export default class Signup extends React.Component {
           {
             (user) => {
               if (user) {
-                return <Redirect to='/' />
+                return <Redirect to='/products' />
               }
               else {
                 return displayForm;
