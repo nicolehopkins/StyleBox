@@ -54,7 +54,7 @@ export default class Signup extends Component {
           {
             (user) => {
               if (user) {
-                return <Redirect to='/products'/>
+                return <Redirect to='/products' />
               }
               else {
                 return displayForm;
