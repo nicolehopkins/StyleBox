@@ -20,6 +20,7 @@
 
 .logo {
     display: block;
+    float: inherit;
     padding: 0%;
     overflow: hidden;
     height: 150px;
@@ -35,10 +36,28 @@
 
 .nav-tags {
     display: inline-flex;
+}
+
+.left {
     float: left;
 }
 
-.account-tags {
-    display: inline-flex;
+.right {
     float: right;
+}
+
+a:link {
+    color: black;
+}
+  
+a:visited {
+    color: black;
+}
+  
+a:hover {
+    color: grey;
+}
+  
+a:active {
+    color: black;
 }

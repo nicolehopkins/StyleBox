@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Redirect } from 'react-router-dom';
+import { Link, Redirect } from 'react-router-dom';
 import firebase from '../firebase';
 import AuthContext from '../contexts/auth';
 import { Button, Form, FormGroup, Label, Input } from 'reactstrap';
@@ -36,7 +36,8 @@ export default class Signup extends Component {
 
       const { email, password, error } = this.state;
       const displayError = error === '' ? '' : <div className="alert alert-danger" role="alert">{error}</div>
-      const displayForm = <div>
+      const displayForm = <>
+                          <div>
                             <h1>Sign Up</h1>
                             {displayError}
                             <Form inline>
@@ -51,6 +52,14 @@ export default class Signup extends Component {
                             <Button type="submit" onClick={this.handleSubmit}>Submit</Button>
                             </Form>
                           </div>
+                          <div>----------------------------------------------</div>
+                          <div>
+                            <h1>Oops...Already Have an Account?</h1>
+                            <a href='/login' className="nav-item">
+                              <Link className="links" to="/login">Sign In </Link>
+                            </a>
+                          </div>
+                          </>
   
       return (
         <AuthContext.Consumer >

@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import firebase from '../firebase';
 import AuthContext from '../contexts/auth';
 import { Button, Form, FormGroup, Label, Input} from 'reactstrap';
-import { Redirect } from 'react-router-dom';
+import { Link, Redirect } from 'react-router-dom';
 import '../styling/Login.css';
 
 
@@ -65,6 +65,13 @@ export default class Login extends Component {
                           </div>
                           <Button type="submit" className="btn btn-primary" onClick={this.handleSubmit}>Login</Button>
                         </Form>
+                        <div>----------------------------------------------</div>
+                        <h1>New Here?</h1>
+                        <div>
+                        <a href='/signup' className="nav-item">
+                            <Link className="links" to="/signup">Sign Up </Link>
+                        </a>
+                        </div>
                       </>;
 
 
