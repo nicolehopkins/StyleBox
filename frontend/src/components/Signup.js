@@ -3,6 +3,7 @@ import { Link, Redirect } from 'react-router-dom';
 import firebase from '../firebase';
 import AuthContext from '../contexts/auth';
 import { Button, Form, FormGroup, Label, Input } from 'reactstrap';
+import 'bootstrap/dist/css/bootstrap.css';
 import '../styling/Signup.css'
 
 export default class Signup extends Component {
@@ -40,7 +41,7 @@ export default class Signup extends Component {
                           <div>
                             <h1>Sign Up</h1>
                             {displayError}
-                            <Form inline>
+                            <Form>
                             <FormGroup className="mb-2 mr-sm-2 mb-sm-0">
                               <Label for="exampleEmail" className="mr-sm-2">Email</Label>
                               <Input value={email} type="email" name="email" id="exampleEmail" placeholder="something@idk.cool" onChange={this.handleChange}/>
@@ -52,7 +53,7 @@ export default class Signup extends Component {
                             <Button type="submit" onClick={this.handleSubmit}>Submit</Button>
                             </Form>
                           </div>
-                          <div>----------------------------------------------</div>
+                          <div className='divider'>----------------------------------------------</div>
                           <div>
                             <h1>Oops...Already Have an Account?</h1>
                             <a href='/login' className="nav-item">

@@ -65,7 +65,7 @@ export default class Login extends Component {
                           </div>
                           <Button type="submit" className="btn btn-primary" onClick={this.handleSubmit}>Login</Button>
                         </Form>
-                        <div>----------------------------------------------</div>
+                        <div className='divider'>----------------------------------------------</div>
                         <h1>New Here?</h1>
                         <div>
                         <a href='/signup' className="nav-item">
