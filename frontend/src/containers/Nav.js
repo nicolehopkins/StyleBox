@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import { FaRegThumbsUp, FaSearch } from 'react-icons/fa';
-import { FiShoppingCart, FiThumbsUp, FiUserCheck, FiUser } from 'react-icons/fi';
+import { FaSearch } from 'react-icons/fa';
+import { FiShoppingCart, FiUserCheck, FiUser } from 'react-icons/fi';
 import '../styling/Nav.css';
 
 
@@ -19,6 +19,7 @@ export default class Nav extends Component {
                                 <div className='logo'>
                                     <a href='/'><img src='https://tbncdn.freelogodesign.org/985834d1-1891-43a0-ba41-76dcc9cea295.png?1552172962507' alt='logo'/></a>
                                 </div>
+                                <div>
                                 <ul className="nav-tags links left">
                                     <a href='/products'>
                                         <Link className="links" to="/products">Search <FaSearch /></Link>
@@ -32,6 +33,7 @@ export default class Nav extends Component {
                                         <Link className="links" to="/logout">Logout</Link>
                                     </a>
                                 </ul>
+                                </div>
                             </nav>
 
         const userNav =  <nav className="nav-bar">
@@ -46,6 +48,9 @@ export default class Nav extends Component {
                                     <Link className="links" to="/cart">My Cart <FiShoppingCart /></Link>
                                 </a>
                             </ul>
+                            <a href='/logout' className="nav-item">
+                                <Link className="links" to="/logout">My Account <FiUserCheck /></Link>
+                            </a>
                             <ul className="nav-tags links right">
                                 <a href='/logout' className="nav-item">
                                     <Link className="links" to="/logout">Logout</Link>

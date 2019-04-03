@@ -6,6 +6,7 @@ import { Button, Form, FormGroup, Label, Input } from 'reactstrap';
 import 'bootstrap/dist/css/bootstrap.css';
 import '../styling/Signup.css'
 
+
 export default class Signup extends Component {
 
     state = {
@@ -39,9 +40,9 @@ export default class Signup extends Component {
       const displayError = error === '' ? '' : <div className="alert alert-danger" role="alert">{error}</div>
       const displayForm = <>
                           <div>
-                            <h1>Sign Up</h1>
+                            <h3>Sign Up</h3>
                             {displayError}
-                            <Form>
+                            <Form className='form-divider'>
                             <FormGroup className="mb-2 mr-sm-2 mb-sm-0">
                               <Label for="exampleEmail" className="mr-sm-2">Email</Label>
                               <Input value={email} type="email" name="email" id="exampleEmail" placeholder="something@idk.cool" onChange={this.handleChange}/>
@@ -53,9 +54,9 @@ export default class Signup extends Component {
                             <Button type="submit" onClick={this.handleSubmit}>Submit</Button>
                             </Form>
                           </div>
-                          <div className='divider'>----------------------------------------------</div>
+                          {/* <div className='divider'>----------------------------------------------</div> */}
                           <div>
-                            <h1>Oops...Already Have an Account?</h1>
+                            <h3>Oops...Already Have an Account?</h3>
                             <a href='/login' className="nav-item">
                               <Link className="links" to="/login">Sign In </Link>
                             </a>

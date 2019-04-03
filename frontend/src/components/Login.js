@@ -52,9 +52,9 @@ export default class Login extends Component {
     const { email, password, error } = this.state;
     const displayError = error === '' ? '' : <div className="alert alert-danger" role="alert">{error}</div>
     const displayLogIn = <>
-                        <h1>Login</h1>
+                        <h3>Login</h3>
                         {displayError}
-                        <Form>
+                        <Form className='form-divider'>
                           <div className="form-group">
                             <Label htmlFor="exampleInputEmail1">Email</Label>
                             <Input type="email" className="form-control" aria-describedby="emailHelp" placeholder="Enter email" name="email" value={email} onChange={this.handleChange} />
@@ -65,13 +65,14 @@ export default class Login extends Component {
                           </div>
                           <Button type="submit" className="btn btn-primary" onClick={this.handleSubmit}>Login</Button>
                         </Form>
-                        <div className='divider'>----------------------------------------------</div>
-                        <h1>New Here?</h1>
+                        <div className="divider-bottom">
+                        <h3>New Here?</h3>
                         <div>
-                        <a href='/signup' className="nav-item">
+                          <a href='/signup' className="nav-item">
                             <Link className="links" to="/signup">Sign Up </Link>
-                        </a>
+                          </a>
                         </div>
+                      </div>
                       </>;
 
 

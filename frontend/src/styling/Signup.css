@@ -5,3 +5,17 @@
 .exampleEmail {
     text-size-adjust: 30px;
 }
+
+.form-divider {
+    padding-bottom: 50px;
+    border-bottom: 2px grey solid;
+}
+
+.divider-bottom {
+    padding-top: 50px;
+}
+
+.blue-links {
+    color: blue;
+    text-decoration: underline;
+}

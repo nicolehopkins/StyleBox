@@ -20,7 +20,7 @@ import AuthContext from './contexts/auth';
 
 
 class App extends Component {
-
+  
   state = {
     user: null,
   }

@@ -25,4 +25,13 @@
 .button:hover {
     background-color: grey;
     color: black;
-  }
+}
+
+.form-divider {
+    padding-bottom: 50px;
+    border-bottom: 2px grey solid;
+}
+
+.divider-bottom {
+    padding-top: 50px;
+}
