@@ -1,6 +1,7 @@
 .container {
     margin: 0px auto;
     display: inline-flex;
+    /* background-color: #F7F4F8; */
 }
 
 .get-started-button {

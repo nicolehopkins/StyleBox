@@ -54,11 +54,11 @@ export default class Signup extends Component {
                             <Button type="submit" onClick={this.handleSubmit}>Submit</Button>
                             </Form>
                           </div>
-                          {/* <div className='divider'>----------------------------------------------</div> */}
-                          <div>
+                          <div className='divider-bottom'>
                             <h3>Oops...Already Have an Account?</h3>
                             <a href='/login' className="nav-item">
-                              <Link className="links" to="/login">Sign In </Link>
+                              {/* <Button href='/login'>Sign In</Button>  */}
+                              <Link className="blue-links" to="/login">Sign In </Link>
                             </a>
                           </div>
                           </>
