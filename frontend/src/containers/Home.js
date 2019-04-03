@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import Background from '../components/HomeBackground';
+import { Button } from 'reactstrap';
+import 'bootstrap/dist/css/bootstrap.css';
 import '../styling/Home.css';
-import HomeBackground from '../components/HomeBackground';
 // import { SocialIcon } from 'react-social-icons'; --> if using social media
 
 
@@ -11,7 +11,7 @@ export default class Home extends Component {
         return (<>
                 <div className='container'>
                     <div >
-                        <button className='get-started-button' href='/signup' >Get Started</button>
+                        <Button className='get-started-button' href='/signup' >Get Started</Button>
                     </div>
                     <div className="images">
                         <img alt='style1' src='https://images.unsplash.com/photo-1528991435120-e73e05a58897?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=clamp&w=600&q=60' />
