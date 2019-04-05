@@ -69,7 +69,7 @@ export default class Login extends Component {
                         <h3>New Here?</h3>
                         <div>
                           <a href='/signup' className="nav-item">
-                            <Link className="links" to="/signup">Sign Up </Link>
+                            <Link className="blue-links" to="/signup">Sign Up </Link>
                           </a>
                         </div>
                       </div>
