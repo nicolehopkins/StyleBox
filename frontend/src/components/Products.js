@@ -11,69 +11,25 @@ export default class Products extends Component {
         super(props)
 
         this.state = {
-            images: [],
-            productName: '', 
-            modelNumber: '', 
-            description: '', 
+            image: 'https://ae01.alicdn.com/kf/HTB1DCulhyCYBuNkSnaVq6AMsVXaa/Stephen-Hawking-Formal-Quotes-Intelligence-Design-Funny-T-Shirt-for-Men-and-Women-Unisex-Graphic-Premium.jpg_640x640.jpg',
+            productName: 'intelligence tshirt', 
+            modelNumber: '1TZ34', 
+            description: 'white crew neck tshirt', 
             isLiked: false,
         }
     }
 
     render() {
 
-    const { images, productName, modelNumber, description, isLiked } = this.state
+    const { image, productName, modelNumber, description, isLiked } = this.state
     return ( <>
             <div className='product-card'>
                 <Card >
-                <CardImg top width="100%" src="https://placeholdit.imgix.net/~text?txtsize=33&txt=318%C3%97180&w=318&h=180" alt="Card image cap" />
+                <CardImg top width="100%" src={image} alt="Card image cap" />
                 <CardBody>
-                <CardTitle><h2>Product Name</h2></CardTitle>
-                    <CardSubtitle><h3>Model Number</h3></CardSubtitle>
-                    <CardText>Product description. yadda yadda yadda...</CardText>
-                    <Button>I like  <FiHeart /></Button>
-                </CardBody>
-                </Card>
-            </div>
-            <div className='product-card'>
-                <Card >
-                <CardImg top width="100%" src="https://placeholdit.imgix.net/~text?txtsize=33&txt=318%C3%97180&w=318&h=180" alt="Card image cap" />
-                <CardBody>
-                <CardTitle><h2>Product Name</h2></CardTitle>
-                    <CardSubtitle><h3>Model Number</h3></CardSubtitle>
-                    <CardText>Product description. yadda yadda yadda...</CardText>
-                    <Button>I like  <FiHeart /></Button>
-                </CardBody>
-                </Card>
-            </div>
-            <div className='product-card'>
-                <Card >
-                <CardImg top width="100%" src="https://placeholdit.imgix.net/~text?txtsize=33&txt=318%C3%97180&w=318&h=180" alt="Card image cap" />
-                <CardBody>
-                    <CardTitle><h2>Product Name</h2></CardTitle>
-                    <CardSubtitle><h3>Model Number</h3></CardSubtitle>
-                    <CardText>Product description. yadda yadda yadda...</CardText>
-                    <Button>I like  <FiHeart /></Button>
-                </CardBody>
-                </Card>
-            </div>
-            <div className='product-card'>
-                <Card >
-                <CardImg top width="100%" src="https://placeholdit.imgix.net/~text?txtsize=33&txt=318%C3%97180&w=318&h=180" alt="Card image cap" />
-                <CardBody>
-                <CardTitle><h2>Product Name</h2></CardTitle>
-                    <CardSubtitle><h3>Model Number</h3></CardSubtitle>
-                    <CardText>Product description. yadda yadda yadda...</CardText>
-                    <Button>I like  <FiHeart /></Button>
-                </CardBody>
-                </Card>
-            </div>
-            <div className='product-card'>
-                <Card >
-                <CardImg top width="100%" src="https://placeholdit.imgix.net/~text?txtsize=33&txt=318%C3%97180&w=318&h=180" alt="Card image cap" />
-                <CardBody>
-                <CardTitle><h2>Product Name</h2></CardTitle>
-                    <CardSubtitle><h3>Model Number</h3></CardSubtitle>
-                    <CardText>Product description. yadda yadda yadda...</CardText>
+                <CardTitle><h2>{productName}</h2></CardTitle>
+                    <CardSubtitle><h3>{modelNumber}</h3></CardSubtitle>
+                    <CardText>{description}</CardText>
                     <Button>I like  <FiHeart /></Button>
                 </CardBody>
                 </Card>
