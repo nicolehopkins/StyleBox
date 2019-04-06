@@ -4,6 +4,7 @@ import { FaSearch, FaUserAltSlash } from 'react-icons/fa';
 import { FiShoppingCart, FiUserCheck, FiUser } from 'react-icons/fi';
 import '../styling/Nav.css';
 import logo from '../sources/LogoMakr_7S4VGV.png'
+import AuthContext from '../contexts/auth';
 
 
 export default class Nav extends Component {
@@ -23,7 +24,7 @@ export default class Nav extends Component {
                                 <div>
                                 <ul className="nav-tags links left">
                                     <a href='/products'>
-                                        <Link className="links" to="/products"><FaSearch /> Search </Link>
+                                        <Link className="links" to="/products"><FaSearch /> Browse Products </Link>
                                     </a>
                                 </ul>
                                 <ul className="nav-tags links right">
@@ -58,9 +59,16 @@ export default class Nav extends Component {
                                 </a>
                             </ul>
                         </nav>
-
-        if (user) return userNav;
-        else return defaultNav
-
+    
+        return(
+            <AuthContext.Consumer>
+                {
+                    (user) => {
+                        if (user) return userNav
+                        else return defaultNav;
+                    }
+                }
+            </AuthContext.Consumer>
+        )
     }
 }
