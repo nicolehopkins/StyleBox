@@ -38,7 +38,7 @@ export default class Signup extends Component {
 
       const { email, password, error } = this.state;
       const displayError = error === '' ? '' : <div className="alert alert-danger" role="alert">{error}</div>
-      const displayForm = <>
+      const displayForm = <div className='form-container'>
                           <div>
                             <h3>Sign Up</h3>
                             {displayError}
@@ -51,7 +51,7 @@ export default class Signup extends Component {
                               <Label for="examplePassword" className="mr-sm-2">Password</Label>
                               <Input value={password} type="password" name="password" id="examplePassword" placeholder="don't tell!" onChange={this.handleChange} />
                             </FormGroup>
-                            <Button type="submit" onClick={this.handleSubmit}>Submit</Button>
+                            <Button className='button' type="submit" onClick={this.handleSubmit}>Submit</Button>
                             </Form>
                           </div>
                           <div className='divider-bottom'>
@@ -61,7 +61,7 @@ export default class Signup extends Component {
                               <Link className="blue-links" to="/login">Sign In </Link>
                             </a>
                           </div>
-                          </>
+                          </div>
   
       return (
         <AuthContext.Consumer >

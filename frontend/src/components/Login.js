@@ -63,7 +63,7 @@ export default class Login extends Component {
                             <Label htmlFor="exampleInputPassword1">Password</Label>
                             <Input type="password" className="form-control" placeholder="Password" value={password} name="password" onChange={this.handleChange} />
                           </div>
-                          <Button type="submit" className="btn btn-primary" onClick={this.handleSubmit}>Login</Button>
+                          <Button type="submit" className="button" onClick={this.handleSubmit}>Login</Button>
                         </Form>
                         <div className="divider-bottom">
                         <h3>New Here?</h3>
