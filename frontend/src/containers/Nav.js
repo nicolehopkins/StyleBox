@@ -40,7 +40,7 @@ export default class Nav extends Component {
 
         const userNav =  <nav className="nav-bar">
                             <div className='logo'>
-                                <a href='/'><img src='https://tbncdn.freelogodesign.org/985834d1-1891-43a0-ba41-76dcc9cea295.png?1552172962507' alt='logo'/></a>
+                                <a href='/'><img src={logo} alt='logo'/></a>
                             </div>
                             <ul className="nav-tags links left">
                                 <a href='/products'>
