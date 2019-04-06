@@ -1,3 +1,7 @@
+* {
+    font-family: proxima-nova,Helvetica,Verdana,sans-serif;
+}
+
 .form-group {
     padding: 20px;
 }
