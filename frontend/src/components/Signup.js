@@ -67,12 +67,8 @@ export default class Signup extends Component {
         <AuthContext.Consumer >
           {
             (user) => {
-              if (user) {
-                return <Redirect to='/products' />
-              }
-              else {
-                return displayForm;
-              }
+              if (user) return <Redirect to='/products' />
+              else return displayForm;
             }
           }
         </AuthContext.Consumer>
