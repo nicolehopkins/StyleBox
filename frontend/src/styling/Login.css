@@ -2,6 +2,12 @@
     font-family: proxima-nova,Helvetica,Verdana,sans-serif;
 }
 
+.form-container {
+    max-width: 650px;
+    margin: 100px auto;
+    text-align: center;
+}
+
 .input {
     width: 30%;
     height: 50px;

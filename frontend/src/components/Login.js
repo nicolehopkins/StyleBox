@@ -12,7 +12,7 @@ export default class Login extends Component {
     email: '',
     password: '',
     error: '',
-  }
+  } 
 
   handleChange = (e) => {
     this.setState({ [e.target.name]: e.target.value });
@@ -51,7 +51,7 @@ export default class Login extends Component {
   render() {
     const { email, password, error } = this.state;
     const displayError = error === '' ? '' : <div className="alert alert-danger" role="alert">{error}</div>
-    const displayLogIn = <>
+    const displayLogIn = <div className='form-container'>
                         <h3>Login</h3>
                         {displayError}
                         <Form className='form-divider'>
@@ -73,7 +73,7 @@ export default class Login extends Component {
                           </a>
                         </div>
                       </div>
-                      </>;
+                      </div>;
 
 
     return (
