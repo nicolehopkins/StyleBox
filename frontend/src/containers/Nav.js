@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import { FaSearch } from 'react-icons/fa';
+import { FaSearch, FaUserAltSlash } from 'react-icons/fa';
 import { FiShoppingCart, FiUserCheck, FiUser } from 'react-icons/fi';
 import '../styling/Nav.css';
 import logo from '../sources/LogoMakr_7S4VGV.png'
@@ -23,15 +23,15 @@ export default class Nav extends Component {
                                 <div>
                                 <ul className="nav-tags links left">
                                     <a href='/products'>
-                                        <Link className="links" to="/products">Search <FaSearch /></Link>
+                                        <Link className="links" to="/products"><FaSearch /> Search </Link>
                                     </a>
                                 </ul>
                                 <ul className="nav-tags links right">
                                     <a href='/login' className="nav-item">
-                                        <Link className="links" to="/login">Sign In <FiUser /></Link>
+                                        <Link className="links" to="/login"><FiUser /> Sign In </Link>
                                     </a>
                                     <a href='/logout' className="nav-item">
-                                        <Link className="links" to="/logout">Logout</Link>
+                                        <Link className="links" to="/logout"><FaUserAltSlash/>Logout</Link>
                                     </a>
                                 </ul>
                                 </div>
