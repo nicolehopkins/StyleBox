@@ -4,14 +4,15 @@
 
 .container {
     margin: 0px auto;
-    display: inline-flex;
+    display: inline-block;
+    position: relative;
     /* background-color: #F7F4F8; */
 }
 
 .images {
     display: inline-flex;
     width: 100%;
-    height: 90%;
+    height: auto;
 }
 
 .header {
@@ -21,7 +22,7 @@
 
 .get-started-button {
     background-color: #3DA3E1;
-    border: none;
+    border: 5px solid white;
     color: white;
     padding: 15px 32px;
     text-align: center;
@@ -30,4 +31,5 @@
     font-size: 16px;
     -webkit-transition-duration: 0.4s; /* Safari */
     transition-duration: 0.4s;
+    position: absolute; left: 48%; top: 50%;
 }
