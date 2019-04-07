@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import { FaSearch, FaUserAltSlash } from 'react-icons/fa';
+import { Button } from 'reactstrap';
+import { FaGrinStars, FaSearch, FaUserAltSlash } from 'react-icons/fa';
 import { FiShoppingCart, FiUserCheck, FiUser } from 'react-icons/fi';
 import '../styling/Nav.css';
 import logo from '../sources/LogoMakr_7S4VGV.png'
