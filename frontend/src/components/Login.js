@@ -80,7 +80,7 @@ export default class Login extends Component {
       <AuthContext.Consumer>
         {
           (user) => {
-            if (user) return <Redirect to ='/products' />
+            if (user) return <Redirect to ='/myaccount' />
             else return displayLogIn;
           }
         }
