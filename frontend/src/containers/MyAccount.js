@@ -17,7 +17,7 @@ export default class MyAccount extends Component {
                 <div classname='card-container'>
                     <Row>
                         <Col sm="6">
-                            <a href='/'>
+                            <a href='http://localhost:3000/#/cart'>
                                 <Card className='card' body outline color="primary" >
                                     <CardTitle><h4>Your faves   <FaHeart /></h4></CardTitle>
                                     <CardText>Everything you've liked</CardText>

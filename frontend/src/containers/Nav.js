@@ -30,9 +30,6 @@ export default class Nav extends Component {
                                     <a href='/login' className="nav-item">
                                         <Link className="links" to="/login"><FiUser /> Sign In </Link>
                                     </a>
-                                    <a href='/logout' className="nav-item">
-                                        <Link className="links" to="/logout"><FaUserAltSlash/> Logout</Link>
-                                    </a>
                                 </ul>
                                 </div>
                             </nav> 

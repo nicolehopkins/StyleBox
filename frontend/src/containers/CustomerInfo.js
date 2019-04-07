@@ -49,11 +49,7 @@ export default class CustomerInfo extends Component {
                         </FormGroup>  
                     </Col>
                     </Row>
-                    <FormGroup check>
-                    <Input type="checkbox" name="check" id="exampleCheck"/>
-                    <Label for="exampleCheck" check>Check me out</Label>
-                    </FormGroup>
-                    <Button>Sign in</Button>
+                    <Button>Update Info</Button>
                 </Form>
         )
     }
