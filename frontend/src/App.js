@@ -30,6 +30,7 @@ class App extends Component {
     this.unsubscribe = firebase.auth().onAuthStateChanged((user) => {
       if (user) {
         this.setState({ user: user })
+        // maybe do local storage here, if using dummy data
       }
       else {
         this.setState({ user: null })

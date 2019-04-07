@@ -35,7 +35,7 @@ export default class Nav extends Component {
                                     </a>
                                 </ul>
                                 </div>
-                            </nav>
+                            </nav> 
 
         const userNav =  <nav className="nav-bar">
                             <div className='logo'>

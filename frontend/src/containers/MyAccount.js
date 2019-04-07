@@ -1,16 +1,37 @@
 import React, { Component } from 'react';
+import { Card, Button, CardTitle, CardText, Row, Col } from 'reactstrap';
+import '../styling/MyAccount.css'
+import { FaHeart, FaInfoCircle } from 'react-icons/fa'
 import AuthContext from '../contexts/auth';
 
 
 export default class MyAccount extends Component {
 
 
-    render() {
-        // const { user } = this.state;
-        
-        return (<div>
-            Account Page
-        </div>
+
+    render() {  
+        return (<> 
+                <div className='heading'>
+                    <h2>My Account</h2>
+                </div>
+                <div classname='card-container'>
+                    <Row>
+                        <Col sm="6">
+                            <Card className='card' body outline color="primary" href='/'>
+                                <CardTitle><h4>Your faves   <FaHeart /></h4></CardTitle>
+                                <CardText>Everything you've liked</CardText>
+                            </Card>
+                        </Col>
+                        <Col sm="6">
+                            <Card className='card' body outline color="primary">
+                                <CardTitle><h4>Profile   <FaInfoCircle /></h4></CardTitle>
+                                <CardText>Manage email and other account information</CardText>
+                            </Card>
+                        </Col>
+                    </Row>
+                </div>
+                </>
         )
+
     }
 }

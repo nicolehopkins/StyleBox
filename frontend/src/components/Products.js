@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
-import { Card, CardImg, CardBody,
-    CardTitle, Button} from 'reactstrap';
+import { Card, CardImg, CardBody, CardTitle, Button} from 'reactstrap';
 import { FiHeart } from 'react-icons/fi';
 import '../styling/Products.css'
 import Data from '../sources/DummyData'
@@ -13,7 +12,7 @@ export default class Products extends Component {
         this.state = {
             images: ['https://ae01.alicdn.com/kf/HTB1DCulhyCYBuNkSnaVq6AMsVXaa/Stephen-Hawking-Formal-Quotes-Intelligence-Design-Funny-T-Shirt-for-Men-and-Women-Unisex-Graphic-Premium.jpg_640x640.jpg', 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQkqBDUoB1H7K50Bm2nlFyIj4GB4WCbf54kzB97HuCs34bacX7g', 'https://cdn.cliqueinc.com/cache/posts/275492/spring-2019-trends-to-buy-now-275492-1545429888988-image.700x0c.jpg', 'https://i.pinimg.com/originals/15/20/70/152070eff331ebd628fed9751f739015.jpg'],
             productNames: ['intelligence tshirt', 'mens two-toned polo shirt', 'womens golden oversized blazer', 'womens tan pants'],  
-            isLiked: [],
+            isLiked: false,
         }
     }
 

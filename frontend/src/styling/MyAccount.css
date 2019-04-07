@@ -1,0 +1,14 @@
+* {
+    font-family: proxima-nova,Helvetica,Verdana,sans-serif;
+}
+
+.heading {
+    text-align: center;
+}
+
+.card {
+    background-color: #F8F8F8;
+    font-size: 15pt;
+    height: 200px;
+    padding: 10%;
+}
