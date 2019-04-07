@@ -11,7 +11,7 @@ export default class Home extends Component {
         return (
             <div className='container'>
    
-                    <Button className='get-started-button' href='/signup' >Get Started</Button>
+                <Button className='get-started-button' href='/signup' >Get Started</Button>
 
                 <div className="images">
                     <img alt='style1' src='https://images.unsplash.com/photo-1528991435120-e73e05a58897?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=clamp&w=600&q=60' />

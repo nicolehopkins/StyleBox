@@ -15,7 +15,6 @@ export default class Nav extends Component {
 
     render() {
         const { user } = this.state;
-        console.log('user is: ', user)
 
         const defaultNav = <nav className="nav-bar">
                                 <div className='logo'>
@@ -32,7 +31,7 @@ export default class Nav extends Component {
                                         <Link className="links" to="/login"><FiUser /> Sign In </Link>
                                     </a>
                                     <a href='/logout' className="nav-item">
-                                        <Link className="links" to="/logout"><FaUserAltSlash/>Logout</Link>
+                                        <Link className="links" to="/logout"><FaUserAltSlash/> Logout</Link>
                                     </a>
                                 </ul>
                                 </div>
@@ -44,18 +43,18 @@ export default class Nav extends Component {
                             </div>
                             <ul className="nav-tags links left">
                                 <a href='/products'>
-                                    <Link className="links" to="/products">Search <FaSearch /></Link>
+                                    <Link className="links" to="/products"><FaSearch /> Search </Link>
                                 </a>
                                 <a href='/cart' className="nav-item">
-                                    <Link className="links" to="/cart">My Cart <FiShoppingCart /></Link>
+                                    <Link className="links" to="/cart"><FiShoppingCart /> My Cart </Link>
                                 </a>
                             </ul>
                             <a href='/logout' className="nav-item">
-                                <Link className="links" to="/logout">My Account <FiUserCheck /></Link>
+                                <Link className="links" to="/myaccount"><FiUserCheck /> My Account </Link>
                             </a>
                             <ul className="nav-tags links right">
                                 <a href='/logout' className="nav-item">
-                                    <Link className="links" to="/logout">Logout</Link>
+                                    <Link className="links" to="/logout"><FaUserAltSlash/> Logout</Link>
                                 </a>
                             </ul>
                         </nav>

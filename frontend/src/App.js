@@ -9,6 +9,7 @@ import Home from './containers/Home';
 import Signup from './components/Signup';
 import Login from './components/Login';
 import Logout from './containers/Logout';
+import MyAccount from './containers/MyAccount';
 import Products from './components/Products';
 import Cart from './containers/Cart';
 import Checkout from './containers/Checkout';
@@ -51,6 +52,7 @@ class App extends Component {
               <Route path='/signup' exact component={ Signup } />
               <Route path='/login' exact component={ Login } />
               <Route path='/logout' exact component={ Logout } />
+              <Route path='/myaccount' exact component={ MyAccount } />
               <Route path='/products' exact component={ Products } />
               <Route path='/cart' exact component={ Cart } />
               <Route path='/checkout' exact component={ Checkout } /> 
