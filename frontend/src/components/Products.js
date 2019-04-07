@@ -4,6 +4,7 @@ import { Card, CardImg, CardText, CardBody,
 import { FaRegThumbsUp } from 'react-icons/fa';
 import { FiHeart } from 'react-icons/fi';
 import '../styling/Products.css'
+import Data from '../sources/DummyData'
 
 
 export default class Products extends Component {
@@ -11,11 +12,15 @@ export default class Products extends Component {
         super(props)
 
         this.state = {
-            image: ['https://ae01.alicdn.com/kf/HTB1DCulhyCYBuNkSnaVq6AMsVXaa/Stephen-Hawking-Formal-Quotes-Intelligence-Design-Funny-T-Shirt-for-Men-and-Women-Unisex-Graphic-Premium.jpg_640x640.jpg'],
-            productName: ['blah blah blah'],  
-            isLiked: false,
+            image: [],
+            productName: [],  
+            isLiked: [],
         }
     }
+
+    // getProducts = () => {
+    //     Data.
+    // }
 
 
 
