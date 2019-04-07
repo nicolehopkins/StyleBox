@@ -66,10 +66,10 @@ export default class Login extends Component {
                           <Button type="submit" className="button" onClick={this.handleSubmit}>Login</Button>
                         </Form>
                         <div className="divider-bottom">
-                        <h3>New Here?</h3>
+                        <h3>Don't Have An Account Yet?</h3>
                         <div>
                           <a href='/signup' className="nav-item">
-                            <Link className="blue-links" to="/signup">Sign Up </Link>
+                            <h3><Link className="blue-links" to="/signup">Sign Up </Link></h3>
                           </a>
                         </div>
                       </div>

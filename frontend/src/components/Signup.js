@@ -55,10 +55,10 @@ export default class Signup extends Component {
                             </Form>
                           </div>
                           <div className='divider-bottom'>
-                            <h3>Oops...Already Have an Account?</h3>
+                            <h3>Already Have an Account?</h3>
                             <a href='/login' className="nav-item">
                               {/* <Button href='/login'>Sign In</Button>  */}
-                              <Link className="blue-links" to="/login">Sign In </Link>
+                              <h3><Link className="blue-links" to="/login">Sign In </Link></h3>
                             </a>
                           </div>
                           </div>
