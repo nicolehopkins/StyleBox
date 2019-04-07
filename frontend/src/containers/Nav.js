@@ -43,7 +43,7 @@ export default class Nav extends Component {
                             </div>
                             <ul className="nav-tags links left">
                                 <a href='/products'>
-                                    <Link className="links" to="/products"><FaSearch /> Search </Link>
+                                    <Link className="links" to="/products"><FaSearch /> Browse Products </Link>
                                 </a>
                                 <a href='/cart' className="nav-item">
                                     <Link className="links" to="/cart"><FiShoppingCart /> My Cart </Link>
