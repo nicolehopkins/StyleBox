@@ -57,7 +57,6 @@ export default class Signup extends Component {
                           <div className='divider-bottom'>
                             <h3>Already Have an Account?</h3>
                             <a href='/login' className="nav-item">
-                              {/* <Button href='/login'>Sign In</Button>  */}
                               <h3><Link className="blue-links" to="/login">Sign In </Link></h3>
                             </a>
                           </div>

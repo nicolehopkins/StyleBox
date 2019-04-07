@@ -17,16 +17,20 @@ export default class MyAccount extends Component {
                 <div classname='card-container'>
                     <Row>
                         <Col sm="6">
-                            <Card className='card' body outline color="primary" href='/'>
-                                <CardTitle><h4>Your faves   <FaHeart /></h4></CardTitle>
-                                <CardText>Everything you've liked</CardText>
-                            </Card>
+                            <a href='/'>
+                                <Card className='card' body outline color="primary" >
+                                    <CardTitle><h4>Your faves   <FaHeart /></h4></CardTitle>
+                                    <CardText>Everything you've liked</CardText>
+                                </Card>
+                            </a> 
                         </Col>
                         <Col sm="6">
-                            <Card className='card' body outline color="primary">
-                                <CardTitle><h4>Profile   <FaInfoCircle /></h4></CardTitle>
-                                <CardText>Manage email and other account information</CardText>
-                            </Card>
+                            <a href='http://localhost:3000/#/customerinfo'>
+                                <Card className='card' body outline color="primary">
+                                    <CardTitle><h4>Profile   <FaInfoCircle /></h4></CardTitle>
+                                    <CardText>Manage email and other account information</CardText>
+                                </Card>
+                            </a> 
                         </Col>
                     </Row>
                 </div>
