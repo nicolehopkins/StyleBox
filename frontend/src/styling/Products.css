@@ -4,7 +4,7 @@
 
 .product-card {
     border: 2px black;
-    width: 25%;
+    width: 50%;
     height: 25%;
     display: inline-flex;
     flex-wrap: wrap;

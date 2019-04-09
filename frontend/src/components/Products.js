@@ -39,7 +39,7 @@ export default class Products extends Component {
     return ( <>
             <div className='product-container'><h2>Latest Trends</h2></div>
             <div className='product-card'>
-                <Card >
+                <Card className='product-card'>
                 <CardImg top width="100%" src={images[0]} alt="Card image cap" />
                 <CardBody>
                 <CardTitle><h5>{productName}</h5></CardTitle>

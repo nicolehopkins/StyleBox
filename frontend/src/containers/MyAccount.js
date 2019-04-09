@@ -10,7 +10,7 @@ const MyAccount = () => {
                 <div className='heading'>
                     <h2>My Account</h2>
                 </div>
-                <div classname='card-container'>
+                <div className='card-container'>
                     <Row>
                         <Col sm="6">
                             <a href='http://localhost:3000/#/cart'>
