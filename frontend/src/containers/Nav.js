@@ -14,7 +14,6 @@ export default class Nav extends Component {
     }
 
     render() {
-        const { user } = this.state;
 
         const defaultNav = <nav className="nav-bar">
                                 <div className='logo'>

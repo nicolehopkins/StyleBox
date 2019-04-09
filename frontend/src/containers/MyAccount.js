@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { Card, CardTitle, CardText, Row, Col } from 'reactstrap';
 import '../styling/MyAccount.css'
 import { FaHeart, FaInfoCircle } from 'react-icons/fa'
