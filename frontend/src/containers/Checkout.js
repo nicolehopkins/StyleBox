@@ -1,5 +1,5 @@
 import React from 'react';
-import { Col, Row, Button, Form, FormGroup, Label, Input, FormText } from 'reactstrap';
+import { Col, Row, Button, Form, FormGroup, Label, Input } from 'reactstrap';
 
 
 class Checkout extends React.Component {
