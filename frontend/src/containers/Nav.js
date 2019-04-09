@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import { Button } from 'reactstrap';
-import { FaGrinStars, FaSearch, FaUserAltSlash } from 'react-icons/fa';
+import { FaSearch, FaUserAltSlash } from 'react-icons/fa';
 import { FiShoppingCart, FiUserCheck, FiUser } from 'react-icons/fi';
 import '../styling/Nav.css';
 import logo from '../sources/LogoMakr_7S4VGV.png'
@@ -23,14 +22,10 @@ export default class Nav extends Component {
                                 </div>
                                 <div>
                                 <ul className="nav-tags links left">
-                                    <a href='/products'>
-                                        <Link className="links" to="/products"><FaSearch /> Browse Products </Link>
-                                    </a>
+                                    <Link className="links" to="/products"><FaSearch /> Browse Products </Link>
                                 </ul>
                                 <ul className="nav-tags links right">
-                                    <a href='/login' className="nav-item">
-                                        <Link className="links" to="/login"><FiUser /> Sign In </Link>
-                                    </a>
+                                    <Link className="links" to="/login"><FiUser /> Sign In </Link>
                                 </ul>
                                 </div>
                             </nav> 
@@ -40,20 +35,12 @@ export default class Nav extends Component {
                                 <a href='/'><img src={logo} alt='logo'/></a>
                             </div>
                             <ul className="nav-tags links left">
-                                <a href='/products'>
-                                    <Link className="links" to="/products"><FaSearch /> Browse Products </Link>
-                                </a>
-                                <a href='/cart' className="nav-item">
-                                    <Link className="links" to="/cart"><FiShoppingCart /> My Cart </Link>
-                                </a>
+                                <Link className="links" to="/products"><FaSearch /> Browse Products </Link>
+                                <Link className="links" to="/cart"><FiShoppingCart /> My Cart </Link>
                             </ul>
-                            <a href='/logout' className="nav-item">
                                 <Link className="links" to="/myaccount"><FiUserCheck /> My Account </Link>
-                            </a>
                             <ul className="nav-tags links right">
-                                <a href='/logout' className="nav-item">
-                                    <Link className="links" to="/logout"><FaUserAltSlash/> Logout</Link>
-                                </a>
+                                <Link className="links" to="/logout"><FaUserAltSlash/> Logout</Link>
                             </ul>
                         </nav>
     

@@ -20,7 +20,7 @@ export default class Products extends Component {
     componentDidMount() {
         Axios.get(`http://localhost:3001/products/?offset=0&limit=5`)
             .then(response => {
-                console.log(response.data)
+                console.log('response is: ',response.data)
                 return response;
             })
             // .then(productsArr => {
