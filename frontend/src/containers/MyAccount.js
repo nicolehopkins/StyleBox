@@ -1,15 +1,11 @@
 import React, { Component } from 'react';
-import { Card, Button, CardTitle, CardText, Row, Col } from 'reactstrap';
+import { Card, CardTitle, CardText, Row, Col } from 'reactstrap';
 import '../styling/MyAccount.css'
 import { FaHeart, FaInfoCircle } from 'react-icons/fa'
-import AuthContext from '../contexts/auth';
 
 
-export default class MyAccount extends Component {
+const MyAccount = () => {
 
-
-
-    render() {  
         return (<> 
                 <div className='heading'>
                     <h2>My Account</h2>
@@ -36,6 +32,6 @@ export default class MyAccount extends Component {
                 </div>
                 </>
         )
-
-    }
 }
+
+export default MyAccount;
