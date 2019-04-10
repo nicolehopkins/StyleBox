@@ -5,6 +5,13 @@
 .heading {
     text-align: center;
 }
+.col-sm-6 {
+    max-width: 30%;
+}
+
+.row {
+    align-items: center;
+}
 
 .card {
     background-color: #F8F8F8;

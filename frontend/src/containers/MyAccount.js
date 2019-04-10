@@ -18,7 +18,7 @@ const MyAccount = () => {
                                     <CardTitle><h4>Your faves   <FaHeart /></h4></CardTitle>
                                     <CardText>Everything you've liked</CardText>
                                 </Card>
-                            </a> 
+                            </a>
                         </Col>
                         <Col sm="6">
                             <a href='http://localhost:3000/#/customerinfo'>
