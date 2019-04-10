@@ -14,22 +14,29 @@ export default class Products extends Component {
             productName: [],
             images: [],
             isLiked: false,
-            prodcutCount: 1,
-            firstTen : []
+            // prodcutCount: 1,
+            // firstTen : []
         }
     }
 
     componentDidMount() {
+        let { productName, images} = this.state;
         Axios.get(`http://localhost:3001/products/`)
             .then(response => {
-                console.log('response is: ',response.data)
+                console.log('response is: ',response)
                 return response;
             })
             .then(data => {
-                  this.setState({ firstTen: data.data});
-
+                console.log('data is: ', data.data);
+                let productData = data.data
+                for (let i = 0; i < productData.length; i++) {
+                    // productName = productData[i].name
+                    productName.push(productData[i].name)
+                    images.push(productData[i].image)
+                    this.setState({ productName, images})
+                    console.log('new state is: ', this.state)
+                }
             })
-
     }
 
     handleClick = (e) => {
@@ -44,8 +51,8 @@ export default class Products extends Component {
 
     render() {
 
-    const { images, productName, isLiked ,firstTen} = this.state
-    console.log("GIVE ME RESULT:",firstTen)
+    const { images, productName, isLiked} = this.state
+    // console.log("GIVE ME RESULT:",firstTen)
     return ( <>
         <InputGroup>
             <Input placeholder="and..." />
@@ -79,6 +86,7 @@ export default class Products extends Component {
                         <Button value={isLiked} onClick={this.handleClick}>I like  <FiHeart /></Button>
                     </CardBody>
                 </Card>
+
             </>
     )
 }
