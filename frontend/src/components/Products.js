@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Col, Row, Card, CardImg, CardBody, CardTitle, Button,} from 'reactstrap';
-import '../styling/Products.css';
 import ProductCard from '../components/ProductCard';
+import '../styling/Products.css';
 import Axios from 'axios';
 
 
@@ -63,7 +63,7 @@ export default class Products extends Component {
     console.log(products)
 
     return (
-            <Row display='inline-flex'>
+            <Row className='row'>
               {
                 products.map((e, i) => {
                   return <ProductCard image={e.image} name={e.name} isLiked={e.isLiked} handleLikeClick={this.handleLikeClick} key={i} />
