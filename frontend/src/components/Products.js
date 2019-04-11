@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Col, Row, Card, CardImg, CardBody, CardTitle, Button,} from 'reactstrap';
+import { Row, } from 'reactstrap';
 import ProductCard from '../components/ProductCard';
 import '../styling/Products.css';
 import Axios from 'axios';
@@ -11,12 +11,11 @@ export default class Products extends Component {
 
     this.state = {
       products: [],
-      loadMoreCount: 1,
+      loadMoreCount: 1 // Will need this if I do infinite scroll
     }
   }
 
   componentDidMount() {
-    let {products } = this.state
     Axios.get(`http://localhost:3001/products/`)
       .then(response => {
         return response;
@@ -33,7 +32,7 @@ export default class Products extends Component {
           obj.name = name;
           obj.image = image;
           obj.price = price;
-          obj.isLiked = false;
+          obj.inCart = false;
           // console.log('this is the new objectttt',obj)
           updatedState.products.push(obj)
         }
@@ -43,13 +42,13 @@ export default class Products extends Component {
   }
 
   handleLikeClick = (e) => {
-    const { isLiked } = this.state.products;
-    if (isLiked === false) {
-      this.setState({ isLiked: true })
-      // console.log('old isLiked: ', isLiked)
+    const { inCart } = this.state.products;
+    if (inCart === false) {
+      this.setState({ inCart: true })
+      // console.log('old inCart: ', inCart)
     } else {
-      this.setState({ isLiked: false })
-      // console.log('new isLiked: ', isLiked)
+      this.setState({ inCart: false })
+      // console.log('new inCart: ', inCart)
     }
   }
 
@@ -66,7 +65,7 @@ export default class Products extends Component {
             <Row className='row'>
               {
                 products.map((e, i) => {
-                  return <ProductCard image={e.image} name={e.name} isLiked={e.isLiked} handleLikeClick={this.handleLikeClick} key={i} />
+                  return <ProductCard image={e.image} name={e.name} inCart={e.inCart} handleLikeClick={this.handleLikeClick} key={i} />
                 })
               }
             </Row>
