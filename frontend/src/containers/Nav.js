@@ -15,19 +15,19 @@ export default class Nav extends Component {
 
     render() {
 
-        const defaultNav = <nav className="nav-bar">
-                                <div className='logo'>
-                                    <a href='/'><img src={logo} alt='logo'/></a>
-                                </div>
-                                <div>
-                                <ul className="nav-tags links left">
-                                    <Link className="links" to="/products"><FaSearch /> Browse Products </Link>
-                                </ul>
-                                <ul className="nav-tags links right">
-                                    <Link className="links" to="/login"><FiUser /> Sign In </Link>
-                                </ul>
-                                </div>
-                            </nav> 
+      const defaultNav = <nav className="nav-bar">
+                          <div className='logo'>
+                            <a href='/'><img src={logo} alt='logo' /></a>
+                          </div>
+                          <div>
+                            <ul className="nav-tags links left">
+                              <Link className="links" to="/products"><FaSearch /> Browse Products </Link>
+                            </ul>
+                            <ul className="nav-tags links right">
+                              <Link className="links" to="/login"><FiUser /> Sign In </Link>
+                            </ul>
+                          </div>
+                        </nav> 
 
         const userNav =  <nav className="nav-bar">
                             <div className='logo'>
@@ -41,7 +41,7 @@ export default class Nav extends Component {
                             <ul className="nav-tags links right">
                                 <Link className="links" to="/logout"><FaUserAltSlash/> Logout</Link>
                             </ul>
-                        </nav>
+                          </nav>
     
         return(
             <AuthContext.Consumer>
