@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { Card, CardImg, CardBody, CardTitle, Button,} from 'reactstrap';
-
 import '../styling/Products.css';
 import ProductCard from '../components/ProductCard';
 import Axios from 'axios';
@@ -17,25 +16,24 @@ export default class Products extends Component {
     }
   }
 
-  // componentDidMount() {
-  //   let { productName, images } = this.state;
-  //   Axios.get(`http://localhost:3001/products/`)
-  //     .then(response => {
-  //       console.log('response is: ', response)
-  //       return response;
-  //     })
-  //     .then(data => {
-  //       console.log('data is: ', data.data);
-  //       let productData = data.data
-  //       for (let i = 0; i < productData.length; i++) {
-  //         // productName = productData[i].name
-  //         productName.push(productData[i].name)
-  //         images.push(productData[i].image)
-  //         this.setState({ productName, images })
-  //         console.log('new state is: ', this.state)
-  //       }
-  //     })
-  // }
+  componentDidMount() {
+    let { products } = this.state;
+    Axios.get(`http://localhost:3001/products/`)
+      .then(response => {
+        console.log('response is: ', response)
+        return response;
+      })
+      .then(data => {
+        console.log('data is: ', data.data);
+        let productData = data.data
+        for (let i = 0; i < products.length; i++) {
+          // productName = productData[i].name
+          products.push(productData)
+        }
+        this.setState({ products })
+        console.log('new state is: ', this.state)
+      })
+  }
 
   handleClick = (e) => {
     const { isLiked } = this.state;
