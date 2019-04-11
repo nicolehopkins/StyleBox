@@ -1,13 +1,12 @@
 import React from 'react';
 import { Button } from 'reactstrap';
-import 'bootstrap/dist/css/bootstrap.css';
 import '../styling/Home.css';
 
 
 const Home = () => {
 
         return (
-            <div className='container'>
+            <div >
                 <Button className='get-started-button' href='http://localhost:3000/#/signup' >Get Started</Button>
                 <div className="images">
                     <img alt='style1' src='https://images.unsplash.com/photo-1528991435120-e73e05a58897?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=clamp&w=600&q=60' />

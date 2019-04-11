@@ -11,11 +11,9 @@ export default class Products extends Component {
         super(props)
 
         this.state = {
-            productName: [],
-            images: [],
-            isLiked: false,
-            // prodcutCount: 1,
-            // firstTen : []
+            products: [
+                {name: '', image: '', price: ''}
+            ]
         }
     }
 
@@ -51,21 +49,24 @@ export default class Products extends Component {
 
     render() {
 
-    const { images, productName, isLiked} = this.state
-    // console.log("GIVE ME RESULT:",firstTen)
+    const { images, productName, isLiked} = this.state.products;
     return ( <>
         <InputGroup>
             <Input placeholder="and..." />
           <InputGroupAddon addonType="append"><Button color="secondary">I'm a button</Button></InputGroupAddon>
         </InputGroup>
-                <Card className='product-card'>
-                    <CardImg top width="100%" src={images[0]} alt="Card image cap" />
-                    <CardBody>
-                    <CardTitle><h5>{productName}</h5></CardTitle>
-                        <Button value={isLiked} onClick={this.handleClick}>I like  <FiHeart /></Button>
-                    </CardBody>
-                </Card>
-                <Card className='product-card'>
+        { 
+                            <Card className='product-card'>
+                            <CardImg top width="100%" src={images[0]} alt="Card image cap" />
+                            <CardBody>
+                            <CardTitle><h5>{productName}</h5></CardTitle>
+                                <Button value={isLiked} onClick={this.handleClick}>I like  <FiHeart /></Button>
+                            </CardBody>
+                        </Card>
+
+        }
+
+                {/* <Card className='product-card'>
                     <CardImg top width="100%" src={images[0]} alt="Card image cap" />
                     <CardBody>
                     <CardTitle><h5>{productName}</h5></CardTitle>
@@ -85,7 +86,7 @@ export default class Products extends Component {
                     <CardTitle><h5>{productName}</h5></CardTitle>
                         <Button value={isLiked} onClick={this.handleClick}>I like  <FiHeart /></Button>
                     </CardBody>
-                </Card>
+                </Card> */}
 
             </>
     )

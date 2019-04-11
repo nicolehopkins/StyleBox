@@ -4,9 +4,8 @@
 
 .container {
     margin: 0px auto;
-    display: inline-block;
+    display: inline-block; 
     position: relative;
-    /* background-color: #F7F4F8; */
 }
 
 .images {
@@ -31,5 +30,5 @@
     font-size: 30px;
     -webkit-transition-duration: 0.4s; /* Safari */
     transition-duration: 0.4s;
-    position: absolute; left: 75%; top: 45%;
+    position: absolute; left: 50%; top: 70%;
 }
