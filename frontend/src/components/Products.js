@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Row, Card, CardImg, CardBody, CardTitle, Button,} from 'reactstrap';
+import { Col, Row, Card, CardImg, CardBody, CardTitle, Button,} from 'reactstrap';
 import '../styling/Products.css';
 import ProductCard from '../components/ProductCard';
 import Axios from 'axios';
@@ -62,10 +62,11 @@ export default class Products extends Component {
    let { products } = this.state;
     console.log(products)
 
-    return (<Row>
+    return (
+            <Row display='inline-flex'>
               {
                 products.map((e, i) => {
-                  return <ProductCard image={e.image} name={e.name} isLiked={e.isLiked} handleLikeClick={this.handleLikeClick} />
+                  return <ProductCard image={e.image} name={e.name} isLiked={e.isLiked} handleLikeClick={this.handleLikeClick} key={i} />
                 })
               }
             </Row>
