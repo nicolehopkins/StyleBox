@@ -11,13 +11,17 @@ export default class Products extends Component {
 
     this.state = {
       products: [
-        { name: 'unisex intelligence t-shirt', image: 'https://ae01.alicdn.com/kf/HTB1DCulhyCYBuNkSnaVq6AMsVXaa/Stephen-Hawking-Formal-Quotes-Intelligence-Design-Funny-T-Shirt-for-Men-and-Women-Unisex-Graphic-Premium.jpg_640x640.jpg', price: '$20.00', isLiked: false }
-      ]
+        { name: '', image: '', price: '', isLiked: false }
+      ],
+      loadMoreCount: 1,
     }
   }
 
+  // loadMoreProducts() {
+  //   const loadMore = 
+  // }
+
   componentDidMount() {
-    let { products } = this.state;
     Axios.get(`http://localhost:3001/products/`)
       .then(response => {
         console.log('response is: ', response)
@@ -25,13 +29,14 @@ export default class Products extends Component {
       })
       .then(data => {
         console.log('data is: ', data.data);
-        let productData = data.data
-        for (let i = 0; i < products.length; i++) {
-          // productName = productData[i].name
-          products.push(productData)
+        let productData = data.data;
+        let productArr = [];
+        for (let i = 0; i < productData.length; i++) {
+          productArr.push(productData[i])
+          console.log('products are: ', productArr)
+          this.setState({ products: productArr })
+          console.log('new state is: ', this.state)
         }
-        this.setState({ products })
-        console.log('new state is: ', this.state)
       })
   }
 
@@ -46,7 +51,7 @@ export default class Products extends Component {
 
 
   render() {
-    const { products } = this.state;
+   let { products } = this.state;
     console.log(products)
 
     return (<>
