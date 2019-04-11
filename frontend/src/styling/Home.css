@@ -12,6 +12,11 @@
     display: inline-flex;
     width: 100%;
     height: auto;
+    margin: 0;
+}
+
+.no-margin {
+    margin: 0;
 }
 
 .header {
@@ -30,5 +35,5 @@
     font-size: 30px;
     -webkit-transition-duration: 0.4s; /* Safari */
     transition-duration: 0.4s;
-    position: absolute; left: 50%; top: 70%;
+    position: absolute; left: 48%; top: 70%;
 }

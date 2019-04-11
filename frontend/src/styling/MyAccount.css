@@ -4,13 +4,16 @@
 
 .heading {
     text-align: center;
+    padding: 10px;
 }
+
 .col-sm-6 {
     max-width: 30%;
 }
 
 .row {
-    
+    width: 100%;
+    justify-content: center;
 }
 
 .card {

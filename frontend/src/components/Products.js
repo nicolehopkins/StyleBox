@@ -41,7 +41,7 @@ export default class Products extends Component {
       })
   }
 
-  handleLikeClick = (e) => {
+  handleCartClick = (e) => {
     const { inCart } = this.state.products;
     if (inCart === false) {
       this.setState({ inCart: true })
@@ -65,7 +65,7 @@ export default class Products extends Component {
             <Row className='row'>
               {
                 products.map((e, i) => {
-                  return <ProductCard image={e.image} name={e.name} inCart={e.inCart} handleLikeClick={this.handleLikeClick} key={i} />
+                  return <ProductCard image={e.image} name={e.name} inCart={e.inCart} handleLikeClick={this.handleCartClick} key={i} />
                 })
               }
             </Row>
