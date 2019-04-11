@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Card, CardImg, CardBody, CardTitle, Button,} from 'reactstrap';
+import { Row, Card, CardImg, CardBody, CardTitle, Button,} from 'reactstrap';
 import '../styling/Products.css';
 import ProductCard from '../components/ProductCard';
 import Axios from 'axios';
@@ -10,43 +10,51 @@ export default class Products extends Component {
     super(props)
 
     this.state = {
-      products: [
-        { name: '', image: '', price: '', isLiked: false }
-      ],
+      products: [],
       loadMoreCount: 1,
     }
   }
 
-  // loadMoreProducts() {
-  //   const loadMore = 
-  // }
-
   componentDidMount() {
+    let {products } = this.state
     Axios.get(`http://localhost:3001/products/`)
       .then(response => {
-        console.log('response is: ', response)
         return response;
       })
       .then(data => {
-        console.log('data is: ', data.data);
+        // console.log('data is: ', data.data);
         let productData = data.data;
-        let productArr = [];
+        const updatedState = {...this.state};
+        
         for (let i = 0; i < productData.length; i++) {
-          productArr.push(productData[i])
-          console.log('products are: ', productArr)
-          this.setState({ products: productArr })
-          console.log('new state is: ', this.state)
+          let { name, image, price } = productData[i];
+          let obj = {};
+
+          obj.name = name;
+          obj.image = image;
+          obj.price = price;
+          obj.isLiked = false;
+          // console.log('this is the new objectttt',obj)
+          updatedState.products.push(obj)
         }
+        this.setState( updatedState )
+        console.log('new state is: ', this.state)
       })
   }
 
-  handleClick = (e) => {
-    const { isLiked } = this.state;
+  handleLikeClick = (e) => {
+    const { isLiked } = this.state.products;
     if (isLiked === false) {
       this.setState({ isLiked: true })
+      // console.log('old isLiked: ', isLiked)
     } else {
       this.setState({ isLiked: false })
+      // console.log('new isLiked: ', isLiked)
     }
+  }
+
+  handleCardClick = (e) => {
+
   }
 
 
@@ -54,44 +62,13 @@ export default class Products extends Component {
    let { products } = this.state;
     console.log(products)
 
-    return (<>
-      {/* <InputGroup>
-        <Input placeholder="and..." />
-        <InputGroupAddon addonType="append"><Button color="secondary">I'm a button</Button></InputGroupAddon>
-      </InputGroup> */}
-      {
-        products.map((e, i) => {
-          return <ProductCard image={e.image} name={e.name} isLiked={e.isLiked} handleClick={this.handleClick} />
-        })
-        
-
-
-      }
-
-      {/* <Card className='product-card'>
-                    <CardImg top width="100%" src={images[0]} alt="Card image cap" />
-                    <CardBody>
-                    <CardTitle><h5>{productName}</h5></CardTitle>
-                        <Button value={isLiked} onClick={this.handleClick}>I like  <FiHeart /></Button>{console.log(this.state.isLiked)}
-                    </CardBody>
-                </Card>
-                <Card className='product-card'>
-                    <CardImg top width="100%" src={images[0]} alt="Card image cap" />
-                    <CardBody>
-                    <CardTitle><h5>{productName}</h5></CardTitle>
-                        <Button value={isLiked} onClick={this.handleClick}>I like  <FiHeart /></Button>
-                    </CardBody>
-                </Card>
-                <Card className='product-card'>
-                    <CardImg top width="100%" src={images[0]} alt="Card image cap" />
-                    <CardBody>
-                    <CardTitle><h5>{productName}</h5></CardTitle>
-                        <Button value={isLiked} onClick={this.handleClick}>I like  <FiHeart /></Button>
-                    </CardBody>
-                </Card> */}
-
-    </>
-    )
+    return (<Row>
+              {
+                products.map((e, i) => {
+                  return <ProductCard image={e.image} name={e.name} isLiked={e.isLiked} handleLikeClick={this.handleLikeClick} />
+                })
+              }
+            </Row>
+            )
   }
-
 }
