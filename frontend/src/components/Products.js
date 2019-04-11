@@ -23,8 +23,8 @@ export default class Products extends Component {
       .then(data => {
         // console.log('data is: ', data.data);
         let productData = data.data;
-        const updatedState = {...this.state};
-        
+        const updatedState = { ...this.state };
+
         for (let i = 0; i < productData.length; i++) {
           let { name, image, price } = productData[i];
           let obj = {};
@@ -36,7 +36,7 @@ export default class Products extends Component {
           // console.log('this is the new objectttt',obj)
           updatedState.products.push(obj)
         }
-        this.setState( updatedState )
+        this.setState(updatedState)
         console.log('new state is: ', this.state)
       })
   }
@@ -58,17 +58,17 @@ export default class Products extends Component {
 
 
   render() {
-   let { products } = this.state;
+    let { products } = this.state;
     console.log(products)
 
     return (
-            <Row className='row'>
-              {
-                products.map((e, i) => {
-                  return <ProductCard image={e.image} name={e.name} inCart={e.inCart} handleLikeClick={this.handleCartClick} key={i} />
-                })
-              }
-            </Row>
-            )
+      <Row className='row'>
+        {
+          products.map((e, i) => {
+            return <ProductCard image={e.image} name={e.name} inCart={e.inCart} handleLikeClick={this.handleCartClick} key={i} />
+          })
+        }
+      </Row>
+    )
   }
 }

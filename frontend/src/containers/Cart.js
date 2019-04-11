@@ -5,9 +5,12 @@ import { Card, CardImg, CardTitle, Button } from 'reactstrap';
 export default class Cart extends Component {
 
   state = {
-    productName: [],
-    images: [],
+      products: [
+        { name: '', image: '', price: '', isLiked: true }
+      ],
   }
+
+  
 
   render() {
     return (
@@ -18,7 +21,7 @@ export default class Cart extends Component {
                     <Button>Remove from box</Button>
                 </Card>
             </div>
-            );
+            )
   }
 
-};
+}

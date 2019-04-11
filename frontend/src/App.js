@@ -12,7 +12,8 @@ import Logout from './containers/Logout';
 import MyAccount from './containers/MyAccount';
 import Products from './components/Products';
 import Cart from './containers/Cart';
-import CustomerInfo from './containers/CustomerInfo';
+import UpdateForm from './containers/UpdateForm';
+import Submission from './components/Submission'
 import Checkout from './containers/Checkout';
 import Error404 from './components/Error404';
 
@@ -57,7 +58,8 @@ class App extends Component {
               <Route path='/myaccount' exact component={ MyAccount } />
               <Route path='/products' exact component={ Products } />
               <Route path='/cart' exact component={ Cart } />
-              <Route path='/customerinfo' exact component={ CustomerInfo } />
+              <Route path='/updateform' exact component={ UpdateForm } />
+              <Route path='/submission' exact component={ Submission } />
               <Route path='/checkout' exact component={ Checkout } /> 
               <Route component={ Error404 } /> {/* this will show an error for any additional route the user may type in     */}
             </Switch>
