@@ -7,7 +7,7 @@ export default class Submission extends Component {
 
   render() {
       return (<>
-        <h2>Give us some info on your product...</h2>
+        <h2 className='heading'>Give us some info on your product...</h2>
           <Form>
               <Row form>
               <Col md={5}>
