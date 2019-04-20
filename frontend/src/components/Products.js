@@ -73,7 +73,7 @@ export default class Products extends Component {
               <CardImg top width="100%" src={e.image} alt="Card image cap"  />
               <CardBody>
                 <CardTitle ><h5>{e.name}</h5></CardTitle>
-                <BoxButton inCart={e.inCart} handleCartClick={this.handleCartClick} />
+                <BoxButton key={i} inCart={e.inCart} handleCartClick={this.handleCartClick} />
               </CardBody>
             </Card>
             )
