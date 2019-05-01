@@ -1,10 +1,11 @@
 import React from 'react';
+import '../styling/Footer.css'
 
 const Footer = (props) => {
 
   return (
-    <div styling={{height: '150px', color: '#EAF5F8'}}>
-
+    <div className='footer-container'>
+      <h1>Footer</h1>
     </div>
   )
 }
