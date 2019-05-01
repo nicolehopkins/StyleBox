@@ -16,6 +16,7 @@ import UpdateForm from './containers/UpdateForm';
 import Submission from './components/Submission'
 import Checkout from './containers/Checkout';
 import Error404 from './components/Error404';
+import Footer from './containers/Footer';
 
 
 // ---- Context
@@ -63,6 +64,9 @@ class App extends Component {
               <Route path='/checkout' exact component={ Checkout } /> 
               <Route component={ Error404 } /> {/* this will show an error for any additional route the user may type in     */}
             </Switch>
+          </div>
+          <div>
+            <Route path='/' exact component={ Footer } /> 
           </div>
           </AuthContext.Provider>
       </HashRouter>
