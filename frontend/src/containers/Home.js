@@ -29,7 +29,6 @@ export default class Home extends Component {
           </div>
         </div>
         <MissionStatement />
-        <HowItWorks />
         <div className="parallax-container">
           <div className="parallax">
             <img
@@ -39,6 +38,7 @@ export default class Home extends Component {
             />
           </div>
         </div>
+        <HowItWorks />
         <div className="section white">
           <div className="row container">
             <div className="col s12 m10 offset-m1">

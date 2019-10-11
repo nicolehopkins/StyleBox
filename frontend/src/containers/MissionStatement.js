@@ -8,12 +8,12 @@ const MissionStatement = () => {
       style={{ minHeight: "60vh", padding: "10%", textAlign: "center" }}
     >
       <div className="row container">
-        <div className="col s12 m10 offset-m1">
+        <div className="col">
           <span style={{ fontSize: "25px", fontFamily: 'rubik' }}>
-            We’ve spent years talking to women, sharing the nuances of our
-            personal care rituals, and developing great products to support
-            them. We believe that when we show up for ourselves in private,
-            we’re able to show up as ourselves in public
+            Our goal is to curate your shopping experience by providing you with
+            the latest styles to choose from. We seek out what's hot in the streets
+            and have them shipped to your door. Show us your personal style and 
+            let us do the rest.
           </span>
         </div>
       </div>

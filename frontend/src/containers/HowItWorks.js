@@ -2,7 +2,7 @@ import React from "react";
 
 const HowItWorks = () => {
   return (
-    <div className="section white">
+    <div className="section">
       <div className="row container">
         <div className="col s12 m10 offset-m1">
           <h2>About Us Section</h2>
