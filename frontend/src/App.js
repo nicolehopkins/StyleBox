@@ -66,7 +66,7 @@ class App extends Component {
             </Switch>
           </div>
           <div>
-            <Route path='/' exact component={ Footer } /> 
+            {/* <Route path='/' exact component={ Footer } />  */}
           </div>
           </AuthContext.Provider>
       </HashRouter>
