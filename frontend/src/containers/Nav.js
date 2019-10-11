@@ -11,10 +11,10 @@ export default class Nav extends Component {
 
     // Initial Nav (no user logged in)
     const defaultNav = (
-      <div class="navbar-fixed">
+      <div class="navbar-fixed" style={{ margin: '0 !important' }} >
         <nav className='white'>
           <div class="nav-wrapper white">
-            <a href="/" class="brand-logo center" style={{ fontSize: "30px", fontFamily: "" }} >
+            <a href="#/" class="brand-logo center" style={{ fontSize: "60px" }} >
               Stylebox
             </a>
             <a href="/" data-target="mobile-demo" class="sidenav-trigger">
@@ -40,7 +40,7 @@ export default class Nav extends Component {
 
     // Nav for logged in user
     const userNav = (
-      <div class="navbar-fixed">
+      <div class="navbar-fixed" style={{ margin: '0 !important'  }}>
       <nav className='white'>
         <div class="nav-wrapper white">
           <a href="/" class="brand-logo center" style={{ fontSize: "30px", fontFamily: "" }} >
