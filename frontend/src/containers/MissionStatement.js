@@ -1,22 +1,20 @@
 import React from "react";
-import '../styling/Nav.css'
+import "../styling/Fonts.css";
 
 const MissionStatement = () => {
   return (
-    <div className="section cyan lighten-5">
+    <div
+      className="section brown lighten-5"
+      style={{ minHeight: "60vh", padding: "10%", textAlign: "center" }}
+    >
       <div className="row container">
-        <div className="col s12 m10 offset-m1 link-font">
-          <h2 className='link-font'>Mission statement</h2>
-          <p>
-            This will be the about us section where we tell more about Stylebox
-            and what we have to offer.
-          </p>
-          <p>Blah blah blah blah blah blah</p>
-          <p>Blah blah blah blah blah blah</p>
-          <p>Blah blah blah blah blah blah</p>
-          <p>Blah blah blah blah blah blah</p>
-          <p>Blah blah blah blah blah blah</p>
-          <p>Blah blah blah blah blah blah</p>
+        <div className="col s12 m10 offset-m1">
+          <span style={{ fontSize: "25px", fontFamily: 'rubik' }}>
+            We’ve spent years talking to women, sharing the nuances of our
+            personal care rituals, and developing great products to support
+            them. We believe that when we show up for ourselves in private,
+            we’re able to show up as ourselves in public
+          </span>
         </div>
       </div>
     </div>

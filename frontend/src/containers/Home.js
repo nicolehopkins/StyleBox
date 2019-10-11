@@ -22,7 +22,8 @@ export default class Home extends Component {
         <div className="parallax-container">
           <div className="parallax">
             <img
-              src="https://images.unsplash.com/photo-1548123378-bde4eca81d2d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80"
+              src="https://images.unsplash.com/photo-1505262890012-029291d6f9e5?ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80
+              "
               alt="clothing"
             />
           </div>
@@ -32,7 +33,8 @@ export default class Home extends Component {
         <div className="parallax-container">
           <div className="parallax">
             <img
-              src="https://images.unsplash.com/photo-1505262890012-029291d6f9e5?ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80"
+              src="https://images.unsplash.com/photo-1548123378-bde4eca81d2d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80
+              "
               alt="clothing"
             />
           </div>
