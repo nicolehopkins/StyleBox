@@ -1,6 +1,10 @@
 import React, { Component } from "react";
-import "../styling/Nav.css";
 import AuthContext from "../contexts/auth";
+
+// STYLESHEETS
+import "../styling/Nav.css";
+import '../styling/Fonts.css';
+
 
 export default class Nav extends Component {
   state = {
@@ -14,7 +18,7 @@ export default class Nav extends Component {
       <div class="navbar-fixed" style={{ margin: '0 !important' }} >
         <nav className='white'>
           <div class="nav-wrapper white">
-            <a href="#/" class="brand-logo center" style={{ fontSize: "60px" }} >
+            <a href="#/" class="brand-logo center long-cang" style={{ fontSize: "60px" }} >
               Stylebox
             </a>
             <a href="/" data-target="mobile-demo" class="sidenav-trigger">
@@ -22,15 +26,15 @@ export default class Nav extends Component {
             </a>
             <ul class="left hide-on-med-and-down">
               <li>
-                <a href="#/products">Browse Products</a>
+                <a href="#/products" className='rubik'>BROWSE PRODUCTS</a>
               </li>
               <li>
-                <a href="#/aboutus">About Us</a>
+                <a href="#/aboutus" className='rubik'>ABOUT US</a>
               </li>
             </ul>
             <ul class="right hide-on-med-and-down">
               <li>
-                <a href="#/login">Sign In</a>
+                <a href="#/login" className='rubik'>SIGN IN</a>
               </li>
             </ul>
           </div>
@@ -43,7 +47,7 @@ export default class Nav extends Component {
       <div class="navbar-fixed" style={{ margin: '0 !important'  }}>
       <nav className='white'>
         <div class="nav-wrapper white">
-          <a href="/" class="brand-logo center" style={{ fontSize: "30px", fontFamily: "" }} >
+          <a href="/" class="brand-logo center long-cang" style={{ fontSize: "30px", fontFamily: "" }} >
             Stylebox
           </a>
           <a href="/" data-target="mobile-demo" class="sidenav-trigger">
@@ -51,15 +55,15 @@ export default class Nav extends Component {
           </a>
           <ul class="left hide-on-med-and-down">
             <li>
-              <a href="#/products">Browse Products</a>
+              <a href="#/products" className='rubik'>BROWSE PRODUCTS</a>
             </li>
             <li>
-              <a href="#/aboutus">About Us</a>
+              <a href="#/aboutus" className='rubik'>ABOUT US</a>
             </li>
           </ul>
           <ul class="right hide-on-med-and-down">
             <li>
-              <a href="#/myaccount">My Account</a>
+              <a href="#/myaccount" className='rubik'>MY ACCOUNT</a>
             </li>
             <li>
               <a href="#/cart">
