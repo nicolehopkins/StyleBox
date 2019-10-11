@@ -1,9 +1,5 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
-import { FaSearch, FaUserAltSlash } from "react-icons/fa";
-import { FiShoppingCart, FiUserCheck, FiUser } from "react-icons/fi";
 import "../styling/Nav.css";
-import logo from "../sources/StyleBoxNewLogo.png";
 import AuthContext from "../contexts/auth";
 
 export default class Nav extends Component {
@@ -12,48 +8,68 @@ export default class Nav extends Component {
   };
 
   render() {
+
+    // Initial Nav (no user logged in)
     const defaultNav = (
       <div class="navbar-fixed">
-      <nav className="nav-bar">
-        <div className="logo">
-          <a href="/" style={{ fontSize: '30px', fontFamily: '' }} >Stylebox</a>
-        </div>
-        <div>
-          {/* <ul className="nav-tags links left">
-                              <Link className="links" to="/products"><FaSearch /> Browse Products </Link>
-                            </ul>
-                            <ul className="nav-tags links right">
-                              <Link className="links" to="/login"><FiUser /> Sign In </Link>
-                            </ul> */}
-        </div>
-      </nav>
+        <nav className='white'>
+          <div class="nav-wrapper white">
+            <a href="/" class="brand-logo center" style={{ fontSize: "30px", fontFamily: "" }} >
+              Stylebox
+            </a>
+            <a href="/" data-target="mobile-demo" class="sidenav-trigger">
+              <i class="material-icons">menu</i>
+            </a>
+            <ul class="left hide-on-med-and-down">
+              <li>
+                <a href="#/products">Browse Products</a>
+              </li>
+              <li>
+                <a href="#/aboutus">About Us</a>
+              </li>
+            </ul>
+            <ul class="right hide-on-med-and-down">
+              <li>
+                <a href="#/login">Sign In</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
       </div>
     );
 
+    // Nav for logged in user
     const userNav = (
-      <nav className="nav-bar">
-        <div className="logo">
-          <a href="/">
-            <img src={logo} alt="logo" />
+      <div class="navbar-fixed">
+      <nav className='white'>
+        <div class="nav-wrapper white">
+          <a href="/" class="brand-logo center" style={{ fontSize: "30px", fontFamily: "" }} >
+            Stylebox
           </a>
+          <a href="/" data-target="mobile-demo" class="sidenav-trigger">
+            <i class="material-icons">menu</i>
+          </a>
+          <ul class="left hide-on-med-and-down">
+            <li>
+              <a href="#/products">Browse Products</a>
+            </li>
+            <li>
+              <a href="#/aboutus">About Us</a>
+            </li>
+          </ul>
+          <ul class="right hide-on-med-and-down">
+            <li>
+              <a href="#/myaccount">My Account</a>
+            </li>
+            <li>
+              <a href="#/cart">
+                <i class="material-icons">shopping_basket<span class="badge teal lighten-4">4</span></i>
+              </a>
+            </li>
+          </ul>
         </div>
-        <ul className="nav-tags links left">
-          <Link className="links" to="/products">
-            <FaSearch /> Browse Products{" "}
-          </Link>
-          <Link className="links" to="/cart">
-            <FiShoppingCart /> My Cart{" "}
-          </Link>
-        </ul>
-        <Link className="links" to="/myaccount">
-          <FiUserCheck /> My Account{" "}
-        </Link>
-        <ul className="nav-tags links right">
-          <Link className="links" to="/logout">
-            <FaUserAltSlash /> Logout
-          </Link>
-        </ul>
       </nav>
+    </div>
     );
 
     return (
