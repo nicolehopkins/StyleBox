@@ -5,11 +5,7 @@ const Footer = props => {
   return (
     <div
       className="section"
-      style={{
-        minHeight: "60vh",
-        backgroundImage:
-          "url('https://www.freevector.com/uploads/vector/preview/16497/FreeVector-Floral-Background-Pattern-1.jpg')"
-      }}
+      style={{ minHeight: "40vh", backgroundImage: "url('https://www.freevector.com/uploads/vector/preview/16497/FreeVector-Floral-Background-Pattern-1.jpg')"}}
     >
       <div className="row container">
         <div className="col s12 m10 offset-m1">

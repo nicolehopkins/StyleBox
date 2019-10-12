@@ -4,8 +4,8 @@ import "../styling/Home.css";
 
 // COMPONENTS
 import HowItWorks from "./HowItWorks";
-import MissionStatement from './MissionStatement';
-import Footer from './Footer';
+import MissionStatement from "./MissionStatement";
+import Footer from "./Footer";
 
 export default class Home extends Component {
   componentDidMount() {

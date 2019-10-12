@@ -2,10 +2,36 @@ import React from "react";
 
 const HowItWorks = () => {
   return (
-    <div className="section teal lighten-5" style={{ minHeight: '60vh' }}>
-      <div className="row container">
-        <div className="col s12 m10 offset-m1">
-          <h2>How it works Section</h2>
+    <div className="section " style={{ minHeight: '100vh', padding: '5%', alignContent: 'center' }}>
+      <div className="row">
+        <div className="col s4">
+          <h2>Step 1</h2>
+          <p>
+            This will be the about us section where we tell more about Stylebox
+            and what we have to offer.
+          </p>
+          <p>Blah blah blah blah blah blah</p>
+          <p>Blah blah blah blah blah blah</p>
+          <p>Blah blah blah blah blah blah</p>
+          <p>Blah blah blah blah blah blah</p>
+          <p>Blah blah blah blah blah blah</p>
+          <p>Blah blah blah blah blah blah</p>
+        </div>
+        <div className="col s4">
+          <h2>Step 2</h2>
+          <p>
+            This will be the about us section where we tell more about Stylebox
+            and what we have to offer.
+          </p>
+          <p>Blah blah blah blah blah blah</p>
+          <p>Blah blah blah blah blah blah</p>
+          <p>Blah blah blah blah blah blah</p>
+          <p>Blah blah blah blah blah blah</p>
+          <p>Blah blah blah blah blah blah</p>
+          <p>Blah blah blah blah blah blah</p>
+        </div>
+        <div className="col s4">
+          <h2>Step 3</h2>
           <p>
             This will be the about us section where we tell more about Stylebox
             and what we have to offer.
