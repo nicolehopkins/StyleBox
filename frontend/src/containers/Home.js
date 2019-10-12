@@ -5,6 +5,7 @@ import "../styling/Home.css";
 // COMPONENTS
 import HowItWorks from "./HowItWorks";
 import MissionStatement from './MissionStatement';
+import Footer from './Footer';
 
 export default class Home extends Component {
   componentDidMount() {
@@ -39,24 +40,7 @@ export default class Home extends Component {
           </div>
         </div>
         <HowItWorks />
-        <div className="section white">
-          <div className="row container">
-            <div className="col s12 m10 offset-m1">
-              <h2>Footer Section</h2>
-              <p>
-                This will be the footer section where we tell more about our
-                company. Potential customers will be able to sign up, and others
-                can subscribe to our product page
-              </p>
-              <p>Blah blah blah blah blah blah</p>
-              <p>Blah blah blah blah blah blah</p>
-              <p>Blah blah blah blah blah blah</p>
-              <p>Blah blah blah blah blah blah</p>
-              <p>Blah blah blah blah blah blah</p>
-              <p>Blah blah blah blah blah blah</p>
-            </div>
-          </div>
-        </div>
+        <Footer />
       </>
     );
   }
