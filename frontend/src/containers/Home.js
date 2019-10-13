@@ -40,7 +40,7 @@ export default class Home extends Component {
           </div>
         </div>
         <HowItWorks />
-        <Footer />
+        {/* <Footer /> */}
       </>
     );
   }
