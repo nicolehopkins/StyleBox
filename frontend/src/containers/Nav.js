@@ -47,7 +47,7 @@ export default class Nav extends Component {
       <div class="navbar-fixed" style={{ margin: '0 !important'  }}>
       <nav className='white'>
         <div class="nav-wrapper white">
-          <a href="/" class="brand-logo center long-cang" style={{ fontSize: "30px", fontFamily: "" }} >
+          <a href="/" class="brand-logo center long-cang" style={{ fontSize: "30px" }} >
             Stylebox
           </a>
           <a href="/" data-target="mobile-demo" class="sidenav-trigger">
