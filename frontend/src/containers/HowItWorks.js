@@ -8,7 +8,9 @@ import Outfit from  '../sources/outfit.svg';
 
 const HowItWorks = () => {
   return (
-    <div className="section cyan lighten-5" style={{ minHeight: '100vh', padding: '5%', alignContent: 'center' }}>
+    <div className="section brown lighten-5" style={{ minHeight: '100vh', padding: '5%', alignContent: 'center', 
+    // backgroundImage: "url('https://static.vecteezy.com/system/resources/previews/000/100/746/non_2x/vector-abstract-geometric-pattern-background.jpg')" 
+    }}>
       <div className="row" style={{ padding: '3%' }}>
         <h1 className='rubik'>HOW IT WORKS</h1>
       </div>
