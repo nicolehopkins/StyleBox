@@ -18,7 +18,7 @@ const HowItWorks = () => {
         <div className="col s4">
           <h3 className='rubik'>Step 1.</h3>
           <img src={Man} style={{ maxWidth: '300px', padding: '10%'}} alt='gentleman' />
-            <p className='rubik' style={{ fontSize: '20px' }}>Tell us a bit about yourself by filling out a short questionnaire.</p>
+            <p className='rubik' style={{ fontSize: '20px' }}>Tell us a bit about yourself by signing up.</p>
         </div>
         <div className="col s4">
         <h3 className='rubik'>Step 2.</h3>
