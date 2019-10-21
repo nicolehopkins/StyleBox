@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import Materialize from "materialize-css";
-import "../styling/Home.css";
 
 // COMPONENTS
 import HowItWorks from "./HowItWorks";
