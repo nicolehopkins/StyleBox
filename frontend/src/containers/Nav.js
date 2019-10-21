@@ -8,17 +8,14 @@ import "../styling/Fonts.css";
 export default class Nav extends Component {
   state = {
     user: null,
-    slider: 'offScreen'
   };
 
-  slideOut = (e) => {
-    const { slider } = this.state;
-    if (slider === 'offScreen') {
-      console.log(slider)
-      this.setState({slider: 'onScreen'})
-    }
-    console.log(slider)
-    this.setState({slider: 'offScreen'})
+  openNav() {
+    document.getElementById("mySidenav").style.width = "250px";
+  }
+  
+  closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
   }
 
   render() {
@@ -52,23 +49,13 @@ export default class Nav extends Component {
               </ul>
               <ul className="right hide-on-med-and-down">
                 <li>
-                  <a href="#" onClick={this.slideOut}>
+                  <a href="#/login">
                     SIGN IN
                   </a>
                 </li>
               </ul>
             </div>
           </nav>
-          {/* SIGN IN SLIDING NAV */}
-          <div className={this.slider}>
-            <h1>Sign In</h1>
-            <a href="#0" className="cd-panel__close js-cd-close">
-              Close
-            </a>
-            <div className="cd-panel__container">
-              <span>Come on, son!</span>
-            </div>
-          </div>
         </div>
       </>
     );
@@ -87,7 +74,11 @@ export default class Nav extends Component {
                 >
                   Stylebox
                 </a>
-                <a href="/" data-target="mobile-demo" className="sidenav-trigger">
+                <a
+                  href="/"
+                  data-target="mobile-demo"
+                  className="sidenav-trigger"
+                >
                   <i className="material-icons">menu</i>
                 </a>
                 <ul className="left hide-on-med-and-down">
@@ -104,7 +95,7 @@ export default class Nav extends Component {
                 </ul>
                 <ul className="right hide-on-med-and-down">
                   <li>
-                    <a href="#" className="rubik">
+                    <a href="#/myaccount" className="rubik">
                       MY ACCOUNT
                     </a>
                   </li>
@@ -121,25 +112,6 @@ export default class Nav extends Component {
             </nav>
           </div>
         </main>
-        {/* SIGN IN SLIDING NAV */}
-        <div className="cd-panel cd-panel--from-right js-cd-panel-main">
-          <header className="cd-panel__header">
-            <h1>Sign In</h1>
-            <a href="#0" className="cd-panel__close js-cd-close">
-              Close
-            </a>
-          </header>
-          <div className="cd-panel__container">
-            <div className="cd-panel__content">
-              {/* <!-- your side panel content here --> */}
-              <span>Log in, silly</span>
-            </div>
-            {/* <!-- cd-panel__content --> */}
-            <span>Hey</span>
-          </div>
-          {/* <!-- cd-panel__container --> */}
-        </div>
-        {/* <!-- cd-panel --> */}
       </>
     );
 

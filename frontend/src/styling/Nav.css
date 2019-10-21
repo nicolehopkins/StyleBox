@@ -20,81 +20,41 @@ a:active {
   color: black;
 }
 
-.outer {
-  overflow: hidden;
-  position: relative;
-}
-
-.offScreen {
-  position: absolute;
-  height: 100px;
-  width: 100px;
-  right: -100px;
-  top: 50px;
-}
-
-.onScreen {
-  position: absolute;
-  height: 100px;
-  width: 100px;
-  right: 100px;
-  top: 50px;
-}
-
-.cd-panel {
-  /*...*/
-  visibility: hidden;
-  transition: visibility 0s 0.6s;
-}
-
-.cd-panel.cd-panel--is-visible {
-  visibility: visible;
-  transition: visibility 0s 0s;
-}
-
-.cd-panel__header {
-  /*...*/
-  position: fixed;
-  top: 0;
-  width: 90%;
-  height: 50px;
-  transition: transform 0.3s 0s;
-  transform: translateY(-50px);
-}
-
-.cd-panel--from-right .cd-panel__header {
-  right: 0;
-}
-
-.cd-panel--from-left .cd-panel__header {
-  left: 0;
-}
-
-.cd-panel--is-visible .cd-panel__header {
-  transition: transform 0.3s 0.3s;
-  transform: translateY(0px);
-}
-
-.cd-panel__container {
-  /*...*/
-  position: fixed;
-  width: 90%;
+.sidenav {
   height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
   top: 0;
-  transition: transform 0.3s 0.3s;
-}
-
-.cd-panel--from-right .cd-panel__container {
-  right: 0;
-  transform: translate3d(100%, 0, 0);
-}
-
-.cd-panel--from-left .cd-panel__container {
   left: 0;
-  transform: translate3d(-100%, 0, 0);
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
 }
 
-.cd-panel--is-visible .cd-panel__container {
-  transform: translate3d(0, 0, 0);
-  transition-delay: 0s;
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
 }
