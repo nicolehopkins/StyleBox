@@ -20,6 +20,27 @@ a:active {
   color: black;
 }
 
+.outer {
+  overflow: hidden;
+  position: relative;
+}
+
+.offScreen {
+  position: absolute;
+  height: 100px;
+  width: 100px;
+  right: -100px;
+  top: 50px;
+}
+
+.onScreen {
+  position: absolute;
+  height: 100px;
+  width: 100px;
+  right: 100px;
+  top: 50px;
+}
+
 .cd-panel {
   /*...*/
   visibility: hidden;

@@ -3,112 +3,134 @@ import AuthContext from "../contexts/auth";
 
 // STYLESHEETS
 import "../styling/Nav.css";
-import '../styling/Fonts.css';
-
+import "../styling/Fonts.css";
 
 export default class Nav extends Component {
   state = {
-    user: null
+    user: null,
+    slider: 'offScreen'
   };
 
-  render() {
+  slideOut = (e) => {
+    const { slider } = this.state;
+    if (slider === 'offScreen') {
+      console.log(slider)
+      this.setState({slider: 'onScreen'})
+    }
+    console.log(slider)
+    this.setState({slider: 'offScreen'})
+  }
 
+  render() {
     // Initial Nav (no user logged in)
     const defaultNav = (
       <>
-      <main>
-      <div class="navbar-fixed" style={{ margin: '0 !important' }} >
-        <nav className='white'>
-          <div class="nav-wrapper white">
-            <a href="#/" class="brand-logo center long-cang" style={{ fontSize: "60px" }} >
-              Stylebox
+        <div className="navbar-fixed outer" style={{ margin: "0 !important" }}>
+          <nav className="white">
+            <div className="nav-wrapper white">
+              <a
+                href="#/"
+                className="brand-logo center long-cang"
+                style={{ fontSize: "60px" }}
+              >
+                Stylebox
+              </a>
+              <a href="/" data-target="mobile-demo" className="sidenav-trigger">
+                <i className="material-icons">menu</i>
+              </a>
+              <ul className="left hide-on-med-and-down">
+                <li>
+                  <a href="#/products" className="rubik">
+                    BROWSE PRODUCTS
+                  </a>
+                </li>
+                <li>
+                  <a href="#/aboutus" className="rubik">
+                    ABOUT US
+                  </a>
+                </li>
+              </ul>
+              <ul className="right hide-on-med-and-down">
+                <li>
+                  <a href="#" onClick={this.slideOut}>
+                    SIGN IN
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </nav>
+          {/* SIGN IN SLIDING NAV */}
+          <div className={this.slider}>
+            <h1>Sign In</h1>
+            <a href="#0" className="cd-panel__close js-cd-close">
+              Close
             </a>
-            <a href="/" data-target="mobile-demo" class="sidenav-trigger">
-              <i class="material-icons">menu</i>
-            </a>
-            <ul class="left hide-on-med-and-down">
-              <li>
-                <a href="#/products" className='rubik'>BROWSE PRODUCTS</a>
-              </li>
-              <li>
-                <a href="#/aboutus" className='rubik'>ABOUT US</a>
-              </li>
-            </ul>
-            <ul class="right hide-on-med-and-down">
-              <li>
-                <button className='rubik white'>SIGN IN</button>
-              </li>
-            </ul>
+            <div className="cd-panel__container">
+              <span>Come on, son!</span>
+            </div>
           </div>
-        </nav>
-      </div>
-      </main>
-      {/* SIGN IN SLIDING NAV */}
-      <div class="cd-panel cd-panel--from-right js-cd-panel-main">
-      <header class="cd-panel__header">
-        <h1>Sign In</h1>
-        <a href="#0" class="cd-panel__close js-cd-close">
-          Close
-        </a>
-      </header>
-      <div class="cd-panel__container">
-        <div class="cd-panel__content">
-          {/* <!-- your side panel content here --> */}
-          <span>Log in, silly</span>
         </div>
-        {/* <!-- cd-panel__content --> */}
-        <span>Hey</span>
-      </div>
-      {/* <!-- cd-panel__container --> */}
-    </div>
-    </>
+      </>
     );
 
     // Nav for logged in user
     const userNav = (
       <>
-      <main>
-      <div class="navbar-fixed" style={{ margin: '0 !important'  }}>
-      <nav className='white'>
-        <div class="nav-wrapper white">
-          <a href="/" class="brand-logo center long-cang" style={{ fontSize: "30px" }} >
-            Stylebox
-          </a>
-          <a href="/" data-target="mobile-demo" class="sidenav-trigger">
-            <i class="material-icons">menu</i>
-          </a>
-          <ul class="left hide-on-med-and-down">
-            <li>
-              <a href="#/products" className='rubik'>BROWSE PRODUCTS</a>
-            </li>
-            <li>
-              <a href="#/aboutus" className='rubik'>ABOUT US</a>
-            </li>
-          </ul>
-          <ul class="right hide-on-med-and-down">
-            <li>
-              <button href="#/myaccount" className='rubik'>MY ACCOUNT</button>
-            </li>
-            <li>
-              <a href="#/cart">
-                <i class="material-icons">shopping_basket<span class="badge teal lighten-4">4</span></i>
-              </a>
-            </li>
-          </ul>
-        </div>
-      </nav>
-    </div>
-    </main>
-    {/* SIGN IN SLIDING NAV */}
-    <div class="cd-panel cd-panel--from-right js-cd-panel-main">
-          <header class="cd-panel__header">
+        <main>
+          <div className="navbar-fixed" style={{ margin: "0 !important" }}>
+            <nav className="white">
+              <div className="nav-wrapper white">
+                <a
+                  href="/"
+                  className="brand-logo center long-cang"
+                  style={{ fontSize: "30px" }}
+                >
+                  Stylebox
+                </a>
+                <a href="/" data-target="mobile-demo" className="sidenav-trigger">
+                  <i className="material-icons">menu</i>
+                </a>
+                <ul className="left hide-on-med-and-down">
+                  <li>
+                    <a href="#/products" className="rubik">
+                      BROWSE PRODUCTS
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#/aboutus" className="rubik">
+                      ABOUT US
+                    </a>
+                  </li>
+                </ul>
+                <ul className="right hide-on-med-and-down">
+                  <li>
+                    <a href="#" className="rubik">
+                      MY ACCOUNT
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#/cart">
+                      <i className="material-icons">
+                        shopping_basket
+                        <span class="badge teal lighten-4">4</span>
+                      </i>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </nav>
+          </div>
+        </main>
+        {/* SIGN IN SLIDING NAV */}
+        <div className="cd-panel cd-panel--from-right js-cd-panel-main">
+          <header className="cd-panel__header">
             <h1>Sign In</h1>
-            <a href="#0" class="cd-panel__close js-cd-close">
+            <a href="#0" className="cd-panel__close js-cd-close">
               Close
             </a>
           </header>
-          <div class="cd-panel__container">
-            <div class="cd-panel__content">
+          <div className="cd-panel__container">
+            <div className="cd-panel__content">
               {/* <!-- your side panel content here --> */}
               <span>Log in, silly</span>
             </div>
@@ -118,7 +140,7 @@ export default class Nav extends Component {
           {/* <!-- cd-panel__container --> */}
         </div>
         {/* <!-- cd-panel --> */}
-    </>
+      </>
     );
 
     return (
