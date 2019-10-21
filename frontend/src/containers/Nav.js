@@ -15,6 +15,8 @@ export default class Nav extends Component {
 
     // Initial Nav (no user logged in)
     const defaultNav = (
+      <>
+      <main>
       <div class="navbar-fixed" style={{ margin: '0 !important' }} >
         <nav className='white'>
           <div class="nav-wrapper white">
@@ -34,16 +36,38 @@ export default class Nav extends Component {
             </ul>
             <ul class="right hide-on-med-and-down">
               <li>
-                <a href="#/login" className='rubik'>SIGN IN</a>
+                <button className='rubik white'>SIGN IN</button>
               </li>
             </ul>
           </div>
         </nav>
       </div>
+      </main>
+      {/* SIGN IN SLIDING NAV */}
+      <div class="cd-panel cd-panel--from-right js-cd-panel-main">
+      <header class="cd-panel__header">
+        <h1>Sign In</h1>
+        <a href="#0" class="cd-panel__close js-cd-close">
+          Close
+        </a>
+      </header>
+      <div class="cd-panel__container">
+        <div class="cd-panel__content">
+          {/* <!-- your side panel content here --> */}
+          <span>Log in, silly</span>
+        </div>
+        {/* <!-- cd-panel__content --> */}
+        <span>Hey</span>
+      </div>
+      {/* <!-- cd-panel__container --> */}
+    </div>
+    </>
     );
 
     // Nav for logged in user
     const userNav = (
+      <>
+      <main>
       <div class="navbar-fixed" style={{ margin: '0 !important'  }}>
       <nav className='white'>
         <div class="nav-wrapper white">
@@ -63,7 +87,7 @@ export default class Nav extends Component {
           </ul>
           <ul class="right hide-on-med-and-down">
             <li>
-              <a href="#/myaccount" className='rubik'>MY ACCOUNT</a>
+              <button href="#/myaccount" className='rubik'>MY ACCOUNT</button>
             </li>
             <li>
               <a href="#/cart">
@@ -74,6 +98,27 @@ export default class Nav extends Component {
         </div>
       </nav>
     </div>
+    </main>
+    {/* SIGN IN SLIDING NAV */}
+    <div class="cd-panel cd-panel--from-right js-cd-panel-main">
+          <header class="cd-panel__header">
+            <h1>Sign In</h1>
+            <a href="#0" class="cd-panel__close js-cd-close">
+              Close
+            </a>
+          </header>
+          <div class="cd-panel__container">
+            <div class="cd-panel__content">
+              {/* <!-- your side panel content here --> */}
+              <span>Log in, silly</span>
+            </div>
+            {/* <!-- cd-panel__content --> */}
+            <span>Hey</span>
+          </div>
+          {/* <!-- cd-panel__container --> */}
+        </div>
+        {/* <!-- cd-panel --> */}
+    </>
     );
 
     return (
