@@ -1,47 +1,45 @@
-import React, { Component } from 'react';
-import firebase from '../firebase';
-import AuthContext from '../contexts/auth';
-import { Button, Form, Label, Input} from 'reactstrap';
-import { Link, Redirect } from 'react-router-dom';
-import '../styling/Login.css';
-
+import React, { Component } from "react";
+import firebase from "../firebase";
+import AuthContext from "../contexts/auth";
+import { Link, Redirect } from "react-router-dom";
+import "../styling/Login.css";
 
 export default class Login extends Component {
-
   state = {
-    email: '',
-    password: '',
-    error: '',
-  } 
+    email: "",
+    password: "",
+    error: ""
+  };
 
-  handleChange = (e) => {
+  handleChange = e => {
     this.setState({ [e.target.name]: e.target.value });
-  }
+  };
 
-  handleSubmit = (e) => {
+  handleSubmit = e => {
     e.preventDefault();
 
     const { email, password } = this.state;
-    firebase.auth().signInWithEmailAndPassword(email, password)
-      .then((response) => {
-        console.log('Returns: ', response);
+    firebase
+      .auth()
+      .signInWithEmailAndPassword(email, password)
+      .then(response => {
+        console.log("Returns: ", response);
       })
       .catch(err => {
         const { message } = err;
         this.setState({ error: message });
-      })
-  }
+      });
+  };
 
   componentDidMount() {
-    this.unsubscribe = firebase.auth().onAuthStateChanged((user) => {
+    this.unsubscribe = firebase.auth().onAuthStateChanged(user => {
       if (user) {
         // ..... DO YOUR LOGGED IN LOGIC
-        this.props.history.push('/')
-      }
-      else {
+        this.props.history.push("/");
+      } else {
         // ..... The user is logged out
       }
-    })
+    });
   }
 
   componentWillUnmount() {
@@ -50,40 +48,64 @@ export default class Login extends Component {
 
   render() {
     const { email, password, error } = this.state;
-    const displayError = error === '' ? '' : <div className="alert alert-danger" role="alert">{error}</div>
-    const displayLogIn = <div className='form-container'>
-                        <h3>Login</h3>
-                        {displayError}
-                        <Form className='form-divider'>
-                          <div className="form-group">
-                            <Label htmlFor="exampleInputEmail1">Email</Label>
-                            <Input type="email" className="form-control" aria-describedby="emailHelp" placeholder="Enter email" name="email" value={email} onChange={this.handleChange} />
-                          </div>
-                          <div className="form-group">
-                            <Label htmlFor="exampleInputPassword1">Password</Label>
-                            <Input type="password" className="form-control" placeholder="Password" value={password} name="password" onChange={this.handleChange} />
-                          </div>
-                          <Button type="submit" className="button" onClick={this.handleSubmit}>Login</Button>
-                        </Form>
-                        <div className="divider-bottom">
-                        <h3>Don't Have An Account Yet?</h3>
-                        <div>
-                            <Link className="blue-links" to="/signup"><h3>Sign Up </h3></Link>
-                        </div>
-                      </div>
-                      </div>;
+    const displayError =
+      error === "" ? (
+        ""
+      ) : (
+        <div className="alert alert-danger" role="alert">
+          {error}
+        </div>
+      );
+    const displayLogIn = (
+      <>
+        <div className="form-container">
+          <div className="form" style={{ padding: '20%' }}>
+            <h3>Login</h3>
+            {displayError}
+            <div className="row" style={{ width: '80vh'}}>
+              <form className="col s12">
+                <div className="row">
+                  <div className="input-field col s12">
+                    <input id="email" type="email" className="validate" value={email} onChange={this.handleChange} />
+                    <label for="email">Email</label>
+                  </div>
+                </div>
+                <div className="row">
+                  <div className="input-field col s12">
+                    <input id="password" type="password" className="validate" value={password} onChange={this.handleChange}/>
+                    <label for="password">Password</label>
+                  </div>
+                </div>
+              </form>
+            </div>
+            <button
+              type="submit"
+              className="button"
+              onClick={this.handleSubmit}
+            >
+              Login
+            </button>
 
+            <div className="divider-bottom">
+              <h3>Don't Have An Account Yet?</h3>
+              <div>
+                <Link className="blue-links" to="/signup">
+                  <h3>Sign Up </h3>
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
+      </>
+    );
 
     return (
       <AuthContext.Consumer>
-        {
-          (user) => {
-            if (user) return <Redirect to ='/myaccount' />
-            else return displayLogIn;
-          }
-        }
+        {user => {
+          if (user) return <Redirect to="/myaccount" />;
+          else return displayLogIn;
+        }}
       </AuthContext.Consumer>
-    )
+    );
   }
 }
-
