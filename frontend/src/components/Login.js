@@ -52,17 +52,17 @@ export default class Login extends Component {
       error === "" ? (
         ""
       ) : (
-        <div className="alert alert-danger" role="alert">
+        <h6 className="alert alert-danger" role="alert">
           {error}
-        </div>
+        </h6>
       );
     const displayLogIn = (
       <>
-        <div className="form-container">
-          <div className="form" style={{ padding: '20%' }}>
-            <h3>Login</h3>
+        <div className="form-container" style={{ paddingTop: '40%'}}>
+          <div className="form" >
             {displayError}
-            <div className="row" style={{ width: '80vh'}}>
+            <h4>Login</h4>
+            <div className="row">
               <form className="col s12">
                 <div className="row">
                   <div className="input-field col s12">
@@ -85,7 +85,6 @@ export default class Login extends Component {
             >
               Login
             </button>
-
             <div className="divider-bottom">
               <h3>Don't Have An Account Yet?</h3>
               <div>

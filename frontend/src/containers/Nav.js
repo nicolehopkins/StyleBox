@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import AuthContext from "../contexts/auth";
 import Materialize from "materialize-css";
+import Login from '../components/Login';
 
 // STYLESHEETS
 import "../styling/Nav.css";
@@ -12,6 +13,7 @@ export default class Nav extends Component {
   };
 
   componentDidMount() {
+    // sliding sign in form
       document
         .getElementById("login-slide")
         .addEventListener("click", function() {
@@ -19,17 +21,8 @@ export default class Nav extends Component {
           console.log("clicked, mf!");
           Materialize.Sidenav.init(elems, { edge: "right" });
         });
- 
   }
 
-
-  openNav() {
-    document.getElementById("mySidenav").style.width = "250px";
-  }
-
-  closeNav() {
-    document.getElementById("mySidenav").style.width = "0";
-  }
 
   render() {
     // Initial Nav (no user logged in)
@@ -72,42 +65,18 @@ export default class Nav extends Component {
         <ul id="slide-out" className="sidenav">
           <li>
             <div className="user-view">
-              <div className="background">
-                <img src="images/office.jpg" alt="office" />
-              </div>
-              <a href="#user">
+
+              {/* May put an icon here */}
+              {/* <a href="#user">
                 <img
                   className="circle"
                   src="https://materializecss.com/images/yuna.jpg"
                   alt="user"
                 />
-              </a>
-              <a href="#name">
-                <span className="white-text name">John Doe</span>
-              </a>
-              <a href="#email">
-                <span className="white-text email">jdandturk@gmail.com</span>
-              </a>
+              </a> */}
+
+          <Login />
             </div>
-          </li>
-          <li>
-            <a href="#!">
-              <i className="material-icons">cloud</i>First Link With Icon
-            </a>
-          </li>
-          <li>
-            <a href="#!">Second Link</a>
-          </li>
-          <li>
-            <div className="divider"></div>
-          </li>
-          <li>
-            <a className="subheader" href='/#'>Subheader</a>
-          </li>
-          <li>
-            <a className="waves-effect" href="#!">
-              Third Link With Waves
-            </a>
           </li>
         </ul>
       </>
