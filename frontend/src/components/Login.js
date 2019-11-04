@@ -12,6 +12,7 @@ export default class Login extends Component {
   };
 
   handleChange = e => {
+    console.log('we got the keys!')
     this.setState({ [e.target.name]: e.target.value });
   };
 
@@ -60,8 +61,8 @@ export default class Login extends Component {
       <>
         <div className="form-container" style={{ paddingTop: '40%'}}>
           <div className="form" >
-            {displayError}
             <h4>Login</h4>
+            {displayError}
             <div className="row">
               <form className="col s12">
                 <div className="row">
