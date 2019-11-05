@@ -13,7 +13,7 @@ export default class Login extends Component {
 
   handleEmail = (e) => {
     this.setState({ email: e.target.value})
-
+  }
 
   handlePassword = (e) => {
     this.setState({password: e.target.value})
