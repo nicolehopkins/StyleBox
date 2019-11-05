@@ -11,10 +11,13 @@ export default class Login extends Component {
     error: ""
   };
 
-  handleChange = e => {
-    console.log('we got the keys!')
-    this.setState({ [e.target.name]: e.target.value });
-  };
+  handleEmail = (e) => {
+    this.setState({ email: e.target.value})
+
+
+  handlePassword = (e) => {
+    this.setState({password: e.target.value})
+  }
 
   handleSubmit = e => {
     e.preventDefault();
@@ -48,6 +51,7 @@ export default class Login extends Component {
   }
 
   render() {
+    // console.log('input is : ', this.input)
     const { email, password, error } = this.state;
     const displayError =
       error === "" ? (
@@ -67,13 +71,13 @@ export default class Login extends Component {
               <form className="col s12">
                 <div className="row">
                   <div className="input-field col s12">
-                    <input id="email" type="email" className="validate" value={email} onChange={this.handleChange} />
+                    <input id="email" type="email" className="validate" value={email} onChange={this.handleEmail} />
                     <label for="email">Email</label>
                   </div>
                 </div>
                 <div className="row">
                   <div className="input-field col s12">
-                    <input id="password" type="password" className="validate" value={password} onChange={this.handleChange}/>
+                    <input id="password" type="password" className="validate" value={password} onChange={this.handlePassword}/>
                     <label for="password">Password</label>
                   </div>
                 </div>
