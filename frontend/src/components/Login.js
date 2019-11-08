@@ -3,6 +3,7 @@ import firebase from "../firebase";
 import AuthContext from "../contexts/auth";
 import { Link, Redirect } from "react-router-dom";
 import "../styling/Login.css";
+import "../styling/Fonts.css"
 
 export default class Login extends Component {
   state = {
@@ -65,7 +66,7 @@ export default class Login extends Component {
       <>
         <div className="form-container" style={{ paddingTop: '40%'}}>
           <div className="form" >
-            <h4>Login</h4>
+            <h4 className='rubik' >YOUR STYLEBOX</h4>
             {displayError}
             <div className="row">
               <form className="col s12">
@@ -91,7 +92,7 @@ export default class Login extends Component {
               Login
             </button>
             <div className="divider-bottom">
-              <h3>Don't Have An Account Yet?</h3>
+              <h3 className='rubik'>Don't Have An Account Yet?</h3>
               <div>
                 <Link className="blue-links" to="/signup">
                   <h3>Sign Up </h3>

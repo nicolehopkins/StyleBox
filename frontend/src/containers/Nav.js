@@ -36,7 +36,7 @@ export default class Nav extends Component {
                 className="brand-logo center long-cang"
                 style={{ fontSize: "60px" }}
               >
-                Stylebox
+                StyleBox
               </a>
               <a href="/" data-target="mobile-demo" className="sidenav-trigger">
                 <i className="material-icons">menu</i>
@@ -94,7 +94,7 @@ export default class Nav extends Component {
                 className="brand-logo center long-cang"
                 style={{ fontSize: "60px" }}
               >
-                Stylebox
+                StyleBox
               </a>
                 <a
                   href="/"
