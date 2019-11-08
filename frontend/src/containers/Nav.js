@@ -89,13 +89,13 @@ export default class Nav extends Component {
           <div className="navbar-fixed" style={{ margin: "0 !important" }}>
             <nav className="white">
               <div className="nav-wrapper white">
-                <a
-                  href="/"
-                  className="brand-logo center long-cang"
-                  style={{ fontSize: "30px" }}
-                >
-                  Stylebox
-                </a>
+              <a
+                href="#/"
+                className="brand-logo center long-cang"
+                style={{ fontSize: "60px" }}
+              >
+                Stylebox
+              </a>
                 <a
                   href="/"
                   data-target="mobile-demo"
@@ -122,12 +122,15 @@ export default class Nav extends Component {
                     </a>
                   </li>
                   <li>
-                    <a href="#/cart">
+                  <a href="#/logout" className="rubik">
+                      LOG OUT
+                    </a>
+                    {/* <a href="#/cart">
                       <i className="material-icons">
                         shopping_basket
                         <span class="badge teal lighten-4">4</span>
                       </i>
-                    </a>
+                    </a> */}
                   </li>
                 </ul>
               </div>
