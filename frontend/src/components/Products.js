@@ -1,18 +1,17 @@
-import React, { Component } from 'react';
-import { Row, Card, CardImg, CardBody, CardTitle } from 'reactstrap';
-import BoxButton from '../containers/BoxButton'
-import '../styling/Products.css';
-import Axios from 'axios';
-
+import React, { Component } from "react";
+// import { Row, Card, CardImg, CardBody, CardTitle } from 'reactstrap';
+import BoxButton from "../containers/BoxButton";
+import "../styling/Products.css";
+import Axios from "axios";
 
 export default class Products extends Component {
   constructor(props) {
-    super(props)
+    super(props);
 
     this.state = {
       products: [],
       loadMoreCount: 1 // Will need this if I do loadMore button or infinite scroll
-    }
+    };
   }
 
   componentDidMount() {
@@ -35,51 +34,55 @@ export default class Products extends Component {
           obj.image = image;
           obj.price = price;
           obj.inCart = false;
-          updatedState.products.push(obj) // pushing those kays/values into the copied state
+          updatedState.products.push(obj); // pushing those kays/values into the copied state
         }
-        this.setState(updatedState) // setting the state to the copied state
-        console.log('new state is: ', this.state) // testing
-      })
+        this.setState(updatedState); // setting the state to the copied state
+        console.log("new state is: ", this.state); // testing
+      });
   }
 
   // this func will toggle the products in and out of the cart
-  handleCartClick = (e) => {
+  handleCartClick = e => {
     // let { inCart } = this.state.products;
     let click = e.target;
     if (click === false) {
-      this.setState({ inCart: true })
+      this.setState({ inCart: true });
       // console.log('old inCart: ', inCart)
     } else {
-      this.setState({ inCart: false })
+      this.setState({ inCart: false });
       // console.log('new inCart: ', inCart)
     }
-  }
+  };
 
   // this func will show the individual product once a card is clicked
-  handleCardClick = (e) => {
-
-  }
-
+  handleCardClick = e => {};
 
   render() {
     let { products } = this.state;
 
     return (
-      <Row className='row'>
-        {
-          products.map((e, i) => {
-            return (
-              <Card key={i} className='product-card'>
-              <CardImg top width="100%" src={e.image} alt="Card image cap"  />
-              <CardBody>
-                <CardTitle ><h5>{e.name}</h5></CardTitle>
-                <BoxButton key={i} inCart={e.inCart} handleCartClick={this.handleCartClick} />
-              </CardBody>
-            </Card>
-            )
-          })
-        }
-      </Row>
-    )
+      <div className="row">
+        {products.map((e, i) => {
+          return (
+            <a href='/product/1'>
+            <div class="col m6">
+              <div class="card">
+                <div class="card-image">
+                  <img src={e.image} alt='product'/>
+                  <span class="card-title">{e.name}</span>
+                  {/* <a class="btn-floating halfway-fab waves-effect waves-light red">
+                    <i class="material-icons">add</i>
+                  </a> */}
+                </div>
+                <div class="card-content">
+                  <p>{e.name}</p>
+                </div>
+              </div>
+            </div>
+            </a>
+          );
+        })}
+      </div>
+    );
   }
 }
