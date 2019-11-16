@@ -3,7 +3,8 @@ import firebase from "../firebase";
 import AuthContext from "../contexts/auth";
 import { Link, Redirect } from "react-router-dom";
 import "../styling/Login.css";
-import "../styling/Fonts.css"
+import "../styling/Fonts.css";
+import Logo from "../sources/SB Logo.png";
 
 export default class Login extends Component {
   state = {
@@ -65,8 +66,11 @@ export default class Login extends Component {
     const displayLogIn = (
       <>
         <div className="form-container" style={{ paddingTop: '40%'}}>
+          <div style={{ paddingBottom: '40px'}}>
+            <img src={Logo} alt='logo'/>
+          </div>
           <div className="form" >
-            <h4 className='rubik' >YOUR STYLEBOX</h4>
+            <h4 className='rubik' >LOG IN</h4>
             {displayError}
             <div className="row">
               <form className="col s12">
@@ -84,6 +88,7 @@ export default class Login extends Component {
                 </div>
               </form>
             </div>
+            <div style={{ padding: '35px'}}>
             <button
               type="submit"
               className="button"
@@ -91,11 +96,12 @@ export default class Login extends Component {
             >
               Login
             </button>
+            </div>
             <div className="divider-bottom">
-              <h3 className='rubik'>Don't Have An Account Yet?</h3>
+              <h6 className='rubik'>Don't Have An Account Yet?</h6>
               <div>
                 <Link className="blue-links" to="/signup">
-                  <h3>Sign Up </h3>
+                  <h6>Sign Up </h6>
                 </Link>
               </div>
             </div>
