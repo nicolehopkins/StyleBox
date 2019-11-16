@@ -122,7 +122,7 @@ export default class Nav extends Component {
                     </a>
                   </li>
                   <li>
-                  <a href="#/logout" className="rubik">
+                  <a href="#/logout" className="rubik" onClick={() => window.location.reload(false)}>
                       LOG OUT
                     </a>
                     {/* <a href="#/cart">

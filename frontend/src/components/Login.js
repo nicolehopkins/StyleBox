@@ -13,13 +13,13 @@ export default class Login extends Component {
     error: ""
   };
 
-  handleEmail = (e) => {
-    this.setState({ email: e.target.value})
-  }
+  handleEmail = e => {
+    this.setState({ email: e.target.value });
+  };
 
-  handlePassword = (e) => {
-    this.setState({password: e.target.value})
-  }
+  handlePassword = e => {
+    this.setState({ password: e.target.value });
+  };
 
   handleSubmit = e => {
     e.preventDefault();
@@ -55,6 +55,7 @@ export default class Login extends Component {
   render() {
     // console.log('input is : ', this.input)
     const { email, password, error } = this.state;
+
     const displayError =
       error === "" ? (
         ""
@@ -63,46 +64,60 @@ export default class Login extends Component {
           {error}
         </h6>
       );
+
     const displayLogIn = (
       <>
-        <div className="form-container" style={{ paddingTop: '40%'}}>
-          <div style={{ paddingBottom: '40px'}}>
-            <img src={Logo} alt='logo'/>
+        <div className="form-container" style={{ paddingTop: "40%" }}>
+          <div style={{ paddingBottom: "40px" }}>
+            <img src={Logo} alt="logo" />
           </div>
-          <div className="form" >
-            <h4 className='rubik' >LOG IN</h4>
+          <div className="form">
+            <h4 className="rubik">LOG IN</h4>
             {displayError}
             <div className="row">
               <form className="col s12">
                 <div className="row">
                   <div className="input-field col s12">
-                    <input id="email" type="email" className="validate" value={email} onChange={this.handleEmail} />
+                    <input
+                      id="email"
+                      type="email"
+                      className="validate"
+                      value={email}
+                      onChange={this.handleEmail}
+                    />
                     <label for="email">Email</label>
                   </div>
                 </div>
                 <div className="row">
                   <div className="input-field col s12">
-                    <input id="password" type="password" className="validate" value={password} onChange={this.handlePassword}/>
+                    <input
+                      id="password"
+                      type="password"
+                      className="validate"
+                      value={password}
+                      onChange={this.handlePassword}
+                    />
                     <label for="password">Password</label>
                   </div>
                 </div>
               </form>
             </div>
-            <div style={{ padding: '35px'}}>
-            <button
-              type="submit"
-              className="button"
-              onClick={this.handleSubmit}
-            >
-              Login
-            </button>
+            <div style={{ padding: "35px" }}>
+              <button
+                id="slide-out" 
+                type="submit"
+                className="button sidenav-close"
+                onClick={this.handleSubmit}
+              >
+                Login
+              </button>
             </div>
             <div className="divider-bottom">
-              <h6 className='rubik'>Don't Have An Account Yet?</h6>
+              <h6 className="rubik">Don't Have An Account Yet?</h6>
               <div>
-                <Link className="blue-links" to="/signup">
+                <a id="slide-out" className="blue-links sidenav-close" href="#/signup">
                   <h6>Sign Up </h6>
-                </Link>
+                </a>
               </div>
             </div>
           </div>

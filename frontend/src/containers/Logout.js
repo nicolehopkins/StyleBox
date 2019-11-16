@@ -8,7 +8,6 @@ export default class Logout extends Component {
 
   render() {
     return (
-      // <div>
         <div
           style={{
             backgroundImage:
@@ -17,9 +16,7 @@ export default class Logout extends Component {
             width: "100%"
           }}
         >
-          <h1 style={{ color: 'white', textAlign: 'center' }}>Until We Meet Again...</h1>
         </div>
-      // </div>
     );
   }
 }
